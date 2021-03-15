@@ -4,11 +4,24 @@ export default function Like(props){
 
 const [likes, addLikes] = useState(0);
 
-return (
-    <div>
+useEffect(() => {
+    (async () => {
+        try {
+            const res = await fetch('');
+            const data = await res.json()
+        } catch (error) {
+            console.error(error)
+        }
+    })()
+}, [])
 
-        
-    </div>
+return (
+    <>
+    <button onClick={event => addLikes(likes + 1)}>
+        Like
+    </button>
+    <h4>{Likes}</h4>
+    </>
 
 
 

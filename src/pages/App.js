@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
-
-
+import CreateTweet from '../components/CreateTweet'
+import NavBar from '../components/NavBar'
 
 export default function App(props) {
   return (
@@ -10,16 +10,12 @@ export default function App(props) {
       </header>
       <main>
           <aside>
-              <nav>
-                  <ul>
-                    {/* Map over the links to different pages */}
-                  </ul>
-              </nav>
+              <NavBar/>
           </aside>   
-          <div id="main">
-            {/* <Card/> */}
-          </div>  
       </main>
+      <div id="main">
+            {/* <Card/> */}
+      </div>  
     </div>
   );
 }

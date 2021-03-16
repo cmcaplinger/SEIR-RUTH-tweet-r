@@ -5,6 +5,7 @@ import NavBar from '../components/NavBar'
 export default function App(props) {
   return (
     <div className="app-container">
+<<<<<<< HEAD
       <header>
         <CreateTweet/>
       </header>
@@ -15,6 +16,11 @@ export default function App(props) {
       </main>
       <div id="main">
             {/* <Card/> */}
+=======
+      <div id="main">
+            {/* <Card/> */}
+            <h1>App Page</h1>
+>>>>>>> origin/react
       </div>  
     </div>
   );

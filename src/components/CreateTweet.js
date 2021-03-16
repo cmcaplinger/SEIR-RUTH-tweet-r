@@ -11,12 +11,12 @@ export default function CreateTweet() {
 
 
         // tweet schema here, based on the model Rosa wrote on the sketch
-        {
-            user: "German",
-            text: "dsfdsfdsfdfd",
-            mediaImage: 
-            comments: "sfdfdfdfdfd"
-        }
+        // {
+        //     user: "German",
+        //     text: "dsfdsfdsfdfd",
+        //     mediaImage: 
+        //     comments: "sfdfdfdfdfd"
+        // }
     }
 
 

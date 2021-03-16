@@ -20,10 +20,10 @@ export default function Card() {
     return (
         <>
             <Link to='show-page'>
-            <img class="avatar"/>
-            <h3 class='user-name'>{/*cardInfo.username*/}  </h3>
-            <p class='tweet'> {/*cardInfo.tweet-text */} </p>
-            <p class='time-stamp'> {/*cardInfo.timestamp*/} </p>
+                <img class="avatar"/>
+                <h3 class='user-name'>{/*cardInfo.username*/}  </h3>
+                <p class='tweet'> {/*cardInfo.tweet-text */} </p>
+                <p class='time-stamp'> {/*cardInfo.timestamp*/} </p>
             </Link>
             <Like/>
             <Retweet/>

@@ -14,7 +14,7 @@ export default function CreateTweet() {
         {
             user: "German",
             text: "dsfdsfdsfdfd",
-            mediaImage: 
+            mediaImage:       , 
             comments: "sfdfdfdfdfd"
         }
     }

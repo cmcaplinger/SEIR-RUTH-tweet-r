@@ -5,25 +5,22 @@ import routes from './routes';
 import CreateTweet from '../components/CreateTweet';
 
 const AppRouter = props => {
-
-
 	return (
 		<Router>
 			<header>
-				<CreateTweet />
 			</header>
 			<aside>
 				<NavBar routes={routes} />
-					<Switch>
-						{routes.map(({ Component, key, path }) => (
+			</aside>
+			<Switch>
+				{routes.map(({ Component, key, path }) => (
 							<Route
 								key={key}
 								path={path}
 								component={props => <Component page={key} {...props} />}
 							></Route>
 						))}
-					</Switch>
-			</aside>
+			</Switch>
 		</Router>
 	);
 };

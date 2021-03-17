@@ -8,17 +8,30 @@ export default function Profile(props) {
     const [cardInfo, setCardInfo] = useState([])
     const [user, setUser] = useState({})
 
-    // useEffect(() => {
-    //     (async () => {
-    //         try {
-    //             const res = await fetch('');//props.match
-    //             const data = await res.json()
-    //             await setCardInfo(data)
-    //         } catch (error) {
-    //             console.error(error)
-    //         }
-    //     })()
-    // }, [])
+    useEffect(() => {
+        (async () => {
+            try {
+                const res = await fetch('');//props.match
+                const data = await res.json()
+                await setUser(data)
+            } catch (error) {
+                console.error(error)
+            }
+        })()
+    }, [])
+
+    
+    useEffect(() => {
+        (async () => {
+            try {
+                const res = await fetch('');//props.match
+                const data = await res.json()
+                await setCardInfo(data)
+            } catch (error) {
+                console.error(error)
+            }
+        })()
+    }, [])
 
     return(
         <div id="profile-container">
@@ -44,7 +57,6 @@ export default function Profile(props) {
                     })
                 }
             </div>
-
         </div>
     )
 }

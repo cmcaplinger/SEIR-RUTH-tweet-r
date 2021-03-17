@@ -4,24 +4,14 @@ import { Link } from 'react-router-dom';
 
 export default function Card(props) {
 
-    const [cardInfo, setCardInfo] = useState([])
+    // const handleClick = (e) => {
+    //     e.preventDefault()
 
-    // useEffect(() => {
-    //     (async () => {
-    //         try {
-    //             const res = await fetch('');
-    //             const data = await res.json()
-    //             await setCardInfo(data)
-    //         } catch (error) {
-    //             console.error(error)
-    //         }
-    //     })()
-    // }, [])
+    // }
 
     return (
         <>
-            <Link to='show-page'>
-                <div>
+                <div className="card" onClick={<Link to={`/Tweet/${props._id}`}/>}>
                     <img className="avatar"/>
                     <h3 className='username' username={props.username}> {props.username} </h3>
                     <p className='content' content={props.content}> {props.content} </p>
@@ -29,7 +19,6 @@ export default function Card(props) {
                     <small className='likes' likes={props.likes}>{props.likes}</small>
                     <small className='retweets' retweets={props.retweets}>{props.retweets}</small>
                 </div>
-            </Link>
             {/* <Like/>
             <Retweet/> */}
         </>

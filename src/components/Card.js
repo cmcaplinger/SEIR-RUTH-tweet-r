@@ -25,8 +25,8 @@ export default function Card() {
                 <p class='tweet'> {/*cardInfo.tweet-text */} </p>
                 <p class='time-stamp'> {/*cardInfo.timestamp*/} </p>
             </Link>
-            <Like/>
-            <Retweet/>
+            {/* <Like/>
+            <Retweet/> */}
         </>
     )
 }

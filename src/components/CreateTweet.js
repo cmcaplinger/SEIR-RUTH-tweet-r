@@ -1,5 +1,5 @@
 import React from 'react'
-
+import {useEffect, useState } from 'react';
 // we can import a button component here if we like
 
 export default function CreateTweet() {
@@ -7,16 +7,16 @@ export default function CreateTweet() {
     const [newTweet, setNewTweet] = useState("")
 
     const createTweet = (event) => {
-        event.preventDeafault();
+        event.preventDefault();
 
 
         // tweet schema here, based on the model Rosa wrote on the sketch
-        {
-            user: "German",
-            text: "dsfdsfdsfdfd",
-            mediaImage:       , 
-            comments: "sfdfdfdfdfd"
-        }
+        // {
+        //     user: "German",
+        //     text: "dsfdsfdsfdfd",
+        //     mediaImage:       , 
+        //     comments: "sfdfdfdfdfd"
+        // }
     }
 
 

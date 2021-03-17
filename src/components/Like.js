@@ -15,6 +15,7 @@ useEffect(() => {
     })()
 }, [])
 
+
 return (
     <>
     <button onClick={event => addLikes(likes + 1)}>
@@ -22,17 +23,7 @@ return (
     </button>
     <h4>{likes}</h4>
     </>
-
-
-
-    )
-
-
-
-
-
-
-}
+)}
 
 
 

@@ -12,7 +12,7 @@ const routes = [
     {
 		Component: Tweet,
 		key: 'Tweet',
-		path: '/:id'
+		path: '/Tweet/:id'
 	},
 	{
 		Component: App,

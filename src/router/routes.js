@@ -1,18 +1,18 @@
 import React from 'react';
 import App from '../pages/App';
 import Profile from '../pages/Profile';
-import ShowTweet from '../pages/ShowTweet';
+import Tweet from '../pages/Tweet';
 
 const routes = [
     {
 		Component: Profile,
 		key: 'Profile',
-		path: '/profile'
+		path: '/profile/:id'
     },
     {
-		Component: Popular,
-		key: 'Popular',
-		path: '/popular'
+		Component: Tweet,
+		key: 'Tweet',
+		path: '/Tweet/:id'
 	},
 	{
 		Component: App,

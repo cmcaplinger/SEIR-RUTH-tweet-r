@@ -6,22 +6,12 @@ import reportWebVitals from './reportWebVitals';
 
 const app = document.getElementById('root')
 
-<<<<<<< HEAD
-// ReactDOM.render(
-//   <React.StrictMode>
-//     <AppRouter />
-//   </React.StrictMode>,
-//   app
-// );
-ReactDOM.render(<AppRouter />, app);
-=======
 ReactDOM.render(
   <React.StrictMode>
     <AppRouter />
   </React.StrictMode>
   ,app
 );
->>>>>>> origin/react
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

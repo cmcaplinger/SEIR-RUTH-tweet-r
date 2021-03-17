@@ -1,9 +1,5 @@
 import React from 'react'
-<<<<<<< HEAD
-import {useEffect, useState } from 'react';
-=======
 import { useState } from 'react'
->>>>>>> origin/react
 // we can import a button component here if we like
 
 export default function CreateTweet() {
@@ -17,13 +13,8 @@ export default function CreateTweet() {
         // tweet schema here, based on the model Rosa wrote on the sketch
         // {
         //     user: "German",
-<<<<<<< HEAD
-        //     text: "dsfdsfdsfdfd",
-        //     mediaImage:       , 
-=======
             // text: "dsfdsfdsfdfd",
             // mediaImage:       , 
->>>>>>> origin/react
         //     comments: "sfdfdfdfdfd"
         // }
     }

@@ -4,13 +4,13 @@ import ReactDOM from 'react-dom';
 import AppRouter from './router/index';
 import reportWebVitals from './reportWebVitals';
 
-const app = document.getElementById('app')
+const app = document.getElementById('root')
 
 ReactDOM.render(
   <React.StrictMode>
     <AppRouter />
-  </React.StrictMode>,
-  app
+  </React.StrictMode>
+  ,app
 );
 
 // If you want to start measuring performance in your app, pass a function

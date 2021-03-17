@@ -4,10 +4,29 @@ import { useState } from 'react'
 
 export default function CreateTweet() {
 
-    const [newTweet, setNewTweet] = useState("")
+    const [Tweet, setTweet] = useState("")
 
-    const createTweet = (event) => {
-        event.preventDefault();
+
+    const createTweet = async (newTweet, e) => {
+        // e.preventDefault();
+        const body = JSON.stringify({
+            content: newTweet.content,
+            likes: newTweet.likes
+
+        });
+        try {
+            const response =  await fetch('https://seir-tweeter-api.herokuapp.com/', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: body
+            });
+            
+        } catch (error) {
+            console.error(error);
+
+        }
 
 
         // tweet schema here, based on the model Rosa wrote on the sketch
@@ -17,7 +36,7 @@ export default function CreateTweet() {
             // mediaImage:       , 
         //     comments: "sfdfdfdfdfd"
         // }
-    }
+    };
 
 
     
@@ -26,7 +45,7 @@ export default function CreateTweet() {
             <form>
                <div className="create-tweet-input">
                    <img className="avatar"></img>
-                   <input onChange={(event) => setNewTweet(event.target.value)} value={newTweet} placeholder="What's happening" type="text">
+                   <input onChange={(event) => setTweet(event.target.value, event)} value={Tweet} placeholder="What's happening" type="text">
                    </input>
                 </div>  
             </form>

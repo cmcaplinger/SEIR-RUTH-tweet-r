@@ -22,8 +22,8 @@ export default function App(props) {
   return (
     <div className="app-container">
       <div id="main">
-            
             <h1>App Page</h1>
+            <CreateTweet />
 
             <div>
                 {

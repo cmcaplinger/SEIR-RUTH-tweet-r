@@ -10,7 +10,6 @@ const AppRouter = props => {
 	return (
 		<Router>
 			<header>
-				<CreateTweet />
 			</header>
 			<aside>
 				<NavBar routes={routes} />

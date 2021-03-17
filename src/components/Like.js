@@ -32,7 +32,7 @@ const updateLikes = async event => {
             })
         });
         const data = await response.json();
-        setNotes([...notes, data]);
+        addLikes([...likes, data.likes]);
     } catch (error) {
         console.error(error);
     }
@@ -40,7 +40,7 @@ const updateLikes = async event => {
 
 return (
     <>
-    <button onClick={event => addLikes(likes + 1)}>
+    <button onClick={updateLikes}>
         Like
     </button>
     <h4>{likes}</h4>

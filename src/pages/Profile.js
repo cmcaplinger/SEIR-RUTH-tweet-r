@@ -36,7 +36,7 @@ export default function Profile(props) {
                         return (
                             <>
                                 <Card
-                                    username={'a;kdjns'}
+                                    username={'card.username'}
                                     content={'card.content'}
                                     timestamp={'card.timestamp'}
                                 />

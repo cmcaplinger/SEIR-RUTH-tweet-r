@@ -1,12 +1,9 @@
 import React from 'react';
-import { useEffect, useState} from 'react';
+import { useEffect, useState } from 'react';
 import Card from '../components/Card';
 
 
 export default function Profile(props) {
-<<<<<<< HEAD
-    
-=======
 
     const [cardInfo, setCardInfo] = useState([])
     const [user, setUser] = useState({})
@@ -23,11 +20,9 @@ export default function Profile(props) {
     //     })()
     // }, [])
 
->>>>>>> origin/react
     return(
         <div id="profile-container">
             <h1>Profile Page</h1> {/*name in 'Profile' */}
-            
             
             <div id="profile-info">
                 <img className="avatar"/>
@@ -50,7 +45,6 @@ export default function Profile(props) {
                 }
             </div>
 
-            
         </div>
     )
 }

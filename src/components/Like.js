@@ -15,25 +15,19 @@ useEffect(() => {
     })()
 }, [])
 
+
 return (
     <>
     <button onClick={event => addLikes(likes + 1)}>
         Like
     </button>
     <h4>{likes}</h4>
+<<<<<<< HEAD
     
+=======
+>>>>>>> origin/react
     </>
-
-
-
-    )
-
-
-
-
-
-
-}
+)}
 
 
 

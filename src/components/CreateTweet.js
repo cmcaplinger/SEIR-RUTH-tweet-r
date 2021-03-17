@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 import { useState } from 'react'
 
+=======
+import React from 'react'
+import { useState } from 'react'
+>>>>>>> origin/react
 // we can import a button component here if we like
 
 export default function CreateTweet() {
@@ -13,8 +18,13 @@ export default function CreateTweet() {
         // tweet schema here, based on the model Rosa wrote on the sketch
         // {
         //     user: "German",
+<<<<<<< HEAD
         //     text: "dsfdsfdsfdfd",
         //     mediaImage:       , 
+=======
+            // text: "dsfdsfdsfdfd",
+            // mediaImage:       , 
+>>>>>>> origin/react
         //     comments: "sfdfdfdfdfd"
         // }
     }
@@ -28,7 +38,6 @@ export default function CreateTweet() {
                    <img className="avatar"></img>
                    <input onChange={(event) => setNewTweet(event.target.value)} value={newTweet} placeholder="What's happening" type="text">
                    </input>
-                   
                 </div>  
             </form>
 

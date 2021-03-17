@@ -71,3 +71,37 @@ $slate-blue: rgba(136, 132, 255, 1);
 @import url('https://fonts.googleapis.com/css2?family=Oswald&family=Questrial&display=swap');
 
 ////
+body{
+	background-color: $cream;
+}
+#profile-container{
+	
+	h1{
+		display:none;
+	}
+	display: flex;
+  	background-color: $sage;
+	color: white;
+	padding: 16px;
+	border-radius: 10px;
+	margin: 0 auto;
+	margin-top: 20px;
+	width: 90%; 
+	height: 50vh;
+	border: 1px solid white;
+	.avatar{
+		height: 125px;
+		width: 125px;
+		background-image: url(https://i.stack.imgur.com/l60Hf.png);
+		background-size: cover;
+		background-position: center;
+		border-radius: 50%;
+	}
+	.prof-info{
+		width: 60%;
+		margin-left: 20px;
+	}
+	h3{
+		font-size: 24px;
+	}
+}

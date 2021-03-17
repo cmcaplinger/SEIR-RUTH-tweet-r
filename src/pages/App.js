@@ -1,7 +1,5 @@
 import { useEffect, useState } from 'react';
 
-
-
 export default function App(props) {
   return (
     <div className="app-container">
@@ -12,4 +10,3 @@ export default function App(props) {
     </div>
   );
 }
-

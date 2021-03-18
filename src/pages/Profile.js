@@ -49,7 +49,6 @@ export default function Profile(props) {
 
     return(
         <div id="profile-container">
-            <h1>Profile Page</h1> {/*name in 'Profile' */}
                 <div className="userSwitchButtons">
                     {allUser.map(user => {
                         return(

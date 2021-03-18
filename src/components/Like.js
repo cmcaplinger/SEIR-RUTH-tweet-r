@@ -18,30 +18,28 @@ useEffect(() => {
 }, [])
 
 
-// const updateLikes = async event => {
-//     event.preventDefault();
-//     try {
-//         const response = await fetch(`/seir-tweeter-api.herokuapp.com/tweets/${props.match.params.id}`, {
-//             method: 'POST',
-//             headers: {
-//                 'Content-Type': 'application/json'
-//             },
-//             body: JSON.stringify({
-//                 note: noteInput.current.value,
-//                 parkID: props.match.params.id
-//             })
-//         });
-//         const data = await response.json();
-//         addLikes([...likes, data.likes]);
-//     } catch (error) {
-//         console.error(error);
-//     }
-// };
+const updateLikes = async event => {
+    event.preventDefault();
+    try {
+        const response = await fetch(`/seir-tweeter-api.herokuapp.com/tweets/${props.match.params.id}`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                likes: likes += 1
+            })
+        });
+        const data = await response.json();
+        addLikes([...likes, data.likes]);
+    } catch (error) {
+        console.error(error);
+    }
+};
 
 return (
     <>
-    {/* <button onClick={updateLikes}> */}
-    <button>
+    <button onClick={updateLikes}>
         Like
     </button>
     <h4>Likes: {likes}</h4>

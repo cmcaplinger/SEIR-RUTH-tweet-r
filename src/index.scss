@@ -72,6 +72,7 @@ $slate-blue: rgba(136, 132, 255, 1);
 @import url('https://fonts.googleapis.com/css2?family=Oswald&family=Questrial&display=swap');
 
 
+
 //NAVIGATION CSS
 
 .NavBar {
@@ -168,3 +169,134 @@ $bar-spacing: 15px;
 	transform: rotate(-45deg);
 	transition: bottom 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1);;
 }}
+////
+
+.Card {
+	.card {
+		display: flex;
+		justify-content: center;
+		height: auto;
+		width: 90%;
+		border: 1px solid blue;
+		padding: 5px;
+		border-radius: 5px;
+		margin: 5px;
+		color: $black
+	  }
+	  
+	  .image-and-content {
+		display: flex;
+	  }
+	  
+	  img {
+		height: 50px;
+		width: 50px;
+		border-radius: 50%;
+		margin: 2px;
+	  }
+	  
+	  .content {
+		margin: 2px;
+		border: 1px solid green;
+	  }
+	  
+	  .user-name, .handle-name, .date {
+		margin: 0px 2px;
+	  }
+	  
+	  .user-name {
+		font-weight: bold;
+	  }
+	  
+	  .tweet {
+		margin: 2px 0;
+	  }
+	  
+	  .top, .actions {
+		display: flex;
+		flex-direction: row;
+	  /*   justify-content: space-between; */
+	  /*   height: 30px; */
+	  /*   width: 100%; */
+		border: 1px solid red;
+	  }
+	  
+	  .actions {
+		justify-content: flex-end;
+	  /*   align-self: center; */
+	  }
+	  
+	  ion-icon {
+		margin: 0px 2px;
+		color: $mandarin;
+	  }
+	  
+	  ion-icon:hover{
+		color: green
+	  }	  
+
+//Basic settings for the body
+body{
+	font-family: 'Questrial', sans-serif;
+	background-color: $cream;
+}
+/// create tweet form
+.create-tweet{
+	background-color: $sage;
+	height: 10vh;
+	width: 100%;
+	box-shadow: 2px 2px 2px rgba(0,0,0,0.4);
+	.create-tweet-input{
+		width:100%;
+	}
+	form{
+		display: flex;
+		justify-content: space-between;
+		padding: 3px;
+	}
+	input{
+		height: 6vh;
+		width: 60vw;
+		margin: 2px;
+	}
+	.tweet-button{
+		height: 3vh;
+		width: 20%;
+		background-color: $mandarin;
+		color: $cream;
+		float: right;
+	}
+}
+/// profile page
+#profile-container{
+	
+	h1{
+		display:none;
+	}
+	display: flex;
+  	background-color: $sage;
+	color: white;
+	padding: 16px;
+	border-radius: 10px;
+	margin: 0 auto;
+	margin-top: 20px;
+	width: 90%; 
+	height: 50vh;
+	border: 1px solid white;
+	.avatar{
+		height: 125px;
+		width: 125px;
+		border: 1px solid black;
+		//// this img is just a place holder 
+		background-image: url(https://i.stack.imgur.com/l60Hf.png);
+		background-size: cover;
+		background-position: center;
+		//////
+		border-radius: 50%;
+	}
+
+	h3{
+		font-size: 24px;
+	}
+
+}

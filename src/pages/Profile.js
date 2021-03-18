@@ -7,6 +7,7 @@ export default function Profile(props) {
 
     const [cardInfo, setCardInfo] = useState([])
     const [user, setUser] = useState({})
+    const [userChoice, setUserChoice]= useState(null)
 
     // useEffect(() => {
     //     (async () => {

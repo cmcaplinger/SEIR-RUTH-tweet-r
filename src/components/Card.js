@@ -20,7 +20,7 @@ export default function Card(props) {
 
     return (
         <>
-            <Link to='show-page'>
+            <Link to={`/Tweet/${props.id}`}> 
                 <div>
                     <img className="avatar"/>
                     <h3 className='username' username={props.username}> {props.username} </h3>
@@ -28,7 +28,7 @@ export default function Card(props) {
                     <p className='timestamp' timestamp={props.timestamp}> {props.timestamp} </p>
                     <small className='likes' likes={props.likes}>{props.likes}</small>
                     <small className='retweets' retweets={props.retweets}>{props.retweets}</small>
-                </div>
+                </div>    
             </Link>
             <Like/>
             {/* <Retweet/> */}

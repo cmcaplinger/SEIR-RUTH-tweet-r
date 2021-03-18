@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-//import Like and Retweet
+import Like from '../components/Like'
 
 export default function Card(props) {
 
@@ -30,8 +30,8 @@ export default function Card(props) {
                     <small className='retweets' retweets={props.retweets}>{props.retweets}</small>
                 </div>
             </Link>
-            {/* <Like/>
-            <Retweet/> */}
+            <Like/>
+            {/* <Retweet/> */}
         </>
     )
 }

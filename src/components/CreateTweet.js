@@ -9,7 +9,6 @@ export default function CreateTweet() {
     const createTweet = (event) => {
         event.preventDefault();
 
-
         // tweet schema here, based on the model Rosa wrote on the sketch
         // {
         //     user: "German",
@@ -18,8 +17,6 @@ export default function CreateTweet() {
         //     comments: "sfdfdfdfdfd"
         // }
     }
-
-
     
     return (
         <div className="create-tweet">

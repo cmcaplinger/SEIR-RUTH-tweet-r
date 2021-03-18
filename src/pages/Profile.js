@@ -11,7 +11,7 @@ export default function Profile(props) {
     useEffect(() => {
         (async () => {
             try {
-                const res = await fetch('');//props.match
+                const res = await fetch('https://seir-tweeter-api.herokuapp.com/users');//props.match
                 const data = await res.json()
                 await setUser(data)
             } catch (error) {
@@ -20,11 +20,10 @@ export default function Profile(props) {
         })()
     }, [])
 
-    
     useEffect(() => {
         (async () => {
             try {
-                const res = await fetch('');//props.match
+                const res = await fetch('https://seir-tweeter-api.herokuapp.com/tweets');//props.match
                 const data = await res.json()
                 await setCardInfo(data)
             } catch (error) {
@@ -33,9 +32,12 @@ export default function Profile(props) {
         })()
     }, [])
 
+
+
     return(
         <div id="profile-container">
             <h1>Profile Page</h1> {/*name in 'Profile' */}
+
             
             <div id="profile-info">
                 <img className="avatar"/>

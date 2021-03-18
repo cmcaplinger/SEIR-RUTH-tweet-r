@@ -84,40 +84,40 @@ $bar-height: 5px;
 $bar-spacing: 15px;
 
 .menu {
-  display: flex;
-  flex-direction: row;
-  background: $sage;
-  height: 10vh;
-  position: sticky;
+display: flex;
+flex-direction: row;
+background: $sage;
+height: 10vh;
+position: sticky;
 }
 
 .logo-wrapper {
-  margin: 5vw;
-  display: flex;
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  background: white;
-  position: absolute;
-  justify-content: space-evenly;
+margin: 5vw;
+display: flex;
+width: 80px;
+height: 80px;
+border-radius: 50%;
+background: white;
+position: absolute;
+justify-content: space-evenly;
 }
 
-  #logo {
-  display: flex;
-  width: 80px;
-  height: 90px;
-  clip-path: polygon(68% 22%, 72% 21%, 76% 22%, 80% 22%, 82% 21%, 79% 19%, 77% 16%, 74% 12%, 71% 10%, 67% 9%, 63% 11%, 60% 14%, 59% 19%, 58% 24%, 58% 29%, 58% 32%, 54% 32%, 51% 33%, 47% 35%, 45% 38%, 42% 39%, 38% 42%, 35% 43%, 31% 43%, 27% 43%,      24% 41%, 21% 38%, 21% 42%, 22% 44%, 21% 48%, 24% 52%, 27% 56%, 30% 59%, 33% 61%, 37% 63%, 42% 64%, 47% 65%, 49% 68%, 49% 71%, 48% 74%, 49% 78%, 48% 81%, 52% 79%, 55% 82%, 55% 78%, 58% 78%, 55% 76%, 52% 74%, 52% 71%, 52% 67%, 53% 64%, 56% 63%,      60% 62%, 63% 60%, 66% 57%, 69% 55%, 71% 51%, 72% 47%, 72% 43%, 71% 38%, 69% 33%, 68% 29%, 66% 22%);
-  background: $mandarin;
+#logo {
+display: flex;
+width: 80px;
+height: 90px;
+clip-path: polygon(68% 22%, 72% 21%, 76% 22%, 80% 22%, 82% 21%, 79% 19%, 77% 16%, 74% 12%, 71% 10%, 67% 9%, 63% 11%, 60% 14%, 59% 19%, 58% 24%, 58% 29%, 58% 32%, 54% 32%, 51% 33%, 47% 35%, 45% 38%, 42% 39%, 38% 42%, 35% 43%, 31% 43%, 27% 43%,      24% 41%, 21% 38%, 21% 42%, 22% 44%, 21% 48%, 24% 52%, 27% 56%, 30% 59%, 33% 61%, 37% 63%, 42% 64%, 47% 65%, 49% 68%, 49% 71%, 48% 74%, 49% 78%, 48% 81%, 52% 79%, 55% 82%, 55% 78%, 58% 78%, 55% 76%, 52% 74%, 52% 71%, 52% 67%, 53% 64%, 56% 63%,      60% 62%, 63% 60%, 66% 57%, 69% 55%, 71% 51%, 72% 47%, 72% 43%, 71% 38%, 69% 33%, 68% 29%, 66% 22%);
+background: $mandarin;
     
 
 .menu-wrapper {
-  position: absolute;
-  top: 0vh;
-  left: 70vw;
-  right: 0;
-  bottom: 0;
-  margin: auto;
-  width: $bar-width;
+	position: absolute;
+	top: 0vh;
+	left: 70vw;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	width: $bar-width;
 	height: $bar-height + $bar-spacing*2;
 	cursor: pointer;
 }
@@ -125,7 +125,7 @@ $bar-spacing: 15px;
 .hamburger-menu,
 .hamburger-menu:after,
 .hamburger-menu:before {
-  width: $bar-width;
+	width: $bar-width;
 	height: $bar-height;
 }
 
@@ -134,10 +134,10 @@ $bar-spacing: 15px;
 	transform: translateY($bar-spacing);
 	background: rgba(255, 255, 255, 1);
 	transition: all 0ms 300ms;
-  
-  &.animate {
+
+&.animate {
     background: rgba(255, 255, 255, 0); 
-  }
+}
 }
 
 .hamburger-menu:before {
@@ -182,66 +182,69 @@ $bar-spacing: 15px;
 		border-radius: 5px;
 		margin: 5px;
 		color: $black
-	  }
-	  
-	  .image-and-content {
+	}
+	
+	.image-and-content {
 		display: flex;
-	  }
-	  
-	  img {
+	}
+	
+	img {
 		height: 50px;
 		width: 50px;
 		border-radius: 50%;
 		margin: 2px;
-	  }
-	  
-	  .content {
+	}
+	
+	.content {
 		margin: 2px;
 		border: 1px solid green;
-	  }
-	  
-	  .user-name, .handle-name, .date {
+	}
+	
+	.user-name, .handle-name, .date {
 		margin: 0px 2px;
-	  }
-	  
-	  .user-name {
+	}
+	
+	.user-name {
 		font-weight: bold;
-	  }
-	  
-	  .tweet {
+	}
+	
+	.tweet {
 		margin: 2px 0;
-	  }
-	  
-	  .top, .actions {
+	}
+	
+	.top, .actions {
 		display: flex;
 		flex-direction: row;
 	  /*   justify-content: space-between; */
 	  /*   height: 30px; */
 	  /*   width: 100%; */
 		border: 1px solid red;
-	  }
-	  
-	  .actions {
+	}
+	
+	.actions {
 		justify-content: flex-end;
 	  /*   align-self: center; */
-	  }
-	  
-	  ion-icon {
+	}
+	
+	ion-icon {
 		margin: 0px 2px;
 		color: $mandarin;
-	  }
-	  
-	  ion-icon:hover{
+	}
+	
+	ion-icon:hover{
 		color: green
-	  }	  
-
+	}	  
+	}
 //Basic settings for the body
 body{
 	font-family: 'Questrial', sans-serif;
 	background-color: $cream;
 }
 /// create tweet form
-.create-tweet{
+// header{
+// 	position: relative;
+// 	top: 20vh;
+	.create-tweet{
 	background-color: $sage;
 	height: 10vh;
 	width: 100%;
@@ -267,6 +270,8 @@ body{
 		float: right;
 	}
 }
+// }
+
 /// profile page
 #profile-container{
 	
@@ -288,9 +293,9 @@ body{
 		width: 125px;
 		border: 1px solid black;
 		//// this img is just a place holder 
-		background-image: url(https://i.stack.imgur.com/l60Hf.png);
-		background-size: cover;
-		background-position: center;
+		// background-image: url(https://i.stack.imgur.com/l60Hf.png);
+		// background-size: cover;
+		// background-position: center;
 		//////
 		border-radius: 50%;
 	}

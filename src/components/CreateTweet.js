@@ -1,21 +1,27 @@
 import React from 'react'
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 // we can import a button component here if we like
 
 export default function CreateTweet() {
 
-    const [Tweet, setTweet] = useState("")
+    const tweetInput = useRef(null);
+    // const mediaImage = useRef(null);
 
 
-    const createTweet = async (newTweet, e) => {
-        // e.preventDefault();
+    const createTweet = async (e) => {
+        e.preventDefault();
+
+        const tweetValue = tweetInput.current.value
         const body = JSON.stringify({
-            content: newTweet.content,
-            likes: newTweet.likes
-
+            tweet:{
+                content: tweetValue,
+                likes: 0,
+                retweets: 0,
+                user_id: 2
+            }
         });
         try {
-            const response =  await fetch('https://seir-tweeter-api.herokuapp.com/', {
+            const response =  await fetch('https://seir-tweeter-api.herokuapp.com/tweets', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -42,17 +48,14 @@ export default function CreateTweet() {
     
     return (
         <div className="create-tweet">
-            <form>
+            <form onSubmit={createTweet}>
                <div className="create-tweet-input">
-                   <img className="avatar"></img>
-                   <input onChange={(event) => setTweet(event.target.value, event)} value={Tweet} placeholder="What's happening" type="text">
+                   {/* <input className="media-image" type="text" ref/> */}
+                   <input  type="text" ref={tweetInput}>
                    </input>
+                   <input onClick={createTweet} type="submit" className="tweet-button" defaultValue="Tweet"/>
                 </div>  
-            </form>
-
-            <button onClick={createTweet} type="submit" className="tweet-button">Tweet</button>
-            {/* we can add a <Button/> compenent here if we like */}
-            
+            </form>            
         </div>
     )
 }

@@ -12,13 +12,15 @@ const AppRouter = props => {
 				<NavBar routes={routes} />
 			</aside>
 			<Switch>
-				{routes.map(({ Component, key, path }) => (
-							<Route
-								key={key}
-								path={path}
-								component={props => <Component page={key} {...props} />}
-							></Route>
-						))}
+						{
+							routes.map(({ Component, key, path }) => (
+								<Route
+									key={key}
+									path={path}
+									component={props => <Component page={key} {...props} />}
+								></Route>
+							))
+						}
 			</Switch>
 		</Router>
 	);

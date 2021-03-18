@@ -74,6 +74,32 @@ $slate-blue: rgba(136, 132, 255, 1);
 body{
 	background-color: $cream;
 }
+.create-tweet{
+	background-color: $sage;
+	height: 10vh;
+	width: 100%;
+	box-shadow: 2px 2px 2px rgba(0,0,0,0.4);
+	.create-tweet-input{
+		width:100%;
+	}
+	form{
+		display: flex;
+		justify-content: space-between;
+		padding: 3px;
+	}
+	input{
+		height: 6vh;
+		width: 60vw;
+		margin: 2px;
+	}
+	.tweet-button{
+		height: 3vh;
+		width: 20%;
+		background-color: $mandarin;
+		color: $cream;
+		float: right;
+	}
+}
 #profile-container{
 	
 	h1{
@@ -92,14 +118,17 @@ body{
 	.avatar{
 		height: 125px;
 		width: 125px;
+		border: 1px solid black;
+		//// this img is just a place holder 
 		background-image: url(https://i.stack.imgur.com/l60Hf.png);
 		background-size: cover;
 		background-position: center;
+		//////
 		border-radius: 50%;
 	}
-	.prof-info{
-		width: 60%;
-		margin-left: 20px;
+	.profile-info{
+		width: 100%;
+		// margin-left: 20px;
 	}
 	h3{
 		font-size: 24px;

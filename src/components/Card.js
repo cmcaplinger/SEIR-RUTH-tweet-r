@@ -22,6 +22,7 @@ export default function Card(props) {
         <>
             <Link to={`/Tweet/${props.id}`}> 
                 <div>
+
                     <img className="avatar"/>
                     <h3 className='username' username={props.username}> {props.username} </h3>
                     <p className='content' content={props.content}> {props.content} </p>

@@ -71,6 +71,71 @@ $slate-blue: rgba(136, 132, 255, 1);
 @import url('https://fonts.googleapis.com/css2?family=Oswald&family=Questrial&display=swap');
 
 ////
+
+.Card {
+	.card {
+		display: flex;
+		justify-content: center;
+		height: auto;
+		width: 90%;
+		border: 1px solid blue;
+		padding: 5px;
+		border-radius: 5px;
+		margin: 5px;
+		color: $black
+	  }
+	  
+	  .image-and-content {
+		display: flex;
+	  }
+	  
+	  img {
+		height: 50px;
+		width: 50px;
+		border-radius: 50%;
+		margin: 2px;
+	  }
+	  
+	  .content {
+		margin: 2px;
+		border: 1px solid green;
+	  }
+	  
+	  .user-name, .handle-name, .date {
+		margin: 0px 2px;
+	  }
+	  
+	  .user-name {
+		font-weight: bold;
+	  }
+	  
+	  .tweet {
+		margin: 2px 0;
+	  }
+	  
+	  .top, .actions {
+		display: flex;
+		flex-direction: row;
+	  /*   justify-content: space-between; */
+	  /*   height: 30px; */
+	  /*   width: 100%; */
+		border: 1px solid red;
+	  }
+	  
+	  .actions {
+		justify-content: flex-end;
+	  /*   align-self: center; */
+	  }
+	  
+	  ion-icon {
+		margin: 0px 2px;
+		color: $mandarin;
+	  }
+	  
+	  ion-icon:hover{
+		color: green
+	  }	  
+
 //Basic settings for the body
 body{
 	font-family: 'Questrial', sans-serif;
@@ -134,4 +199,5 @@ body{
 	h3{
 		font-size: 24px;
 	}
+
 }

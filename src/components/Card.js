@@ -21,7 +21,7 @@ export default function Card(props) {
     return (
         <>
             <Link to='show-page'>
-                <div>
+                <div className="Card">
                     <img className="avatar"/>
                     <h3 className='username' username={props.username}> {props.username} </h3>
                     <p className='content' content={props.content}> {props.content} </p>

@@ -1,12 +1,11 @@
 import { useEffect, useState } from 'react';
 import Card from '../components/Card';
-import CreateTweet from '../components/CreateTweet'
-
-
+import CreateTweet from '../components/CreateTweet';
 
 export default function App(props) {
 
   const [tweets, setTweets] = useState([])
+  const [user, setUser] = useState({})
 
   useEffect(() => {
         (async () => {
@@ -23,15 +22,15 @@ export default function App(props) {
   return (
     <div className="app-container">
       <div id="main">
+        <CreateTweet />
             <h1>App Page</h1>
-            <CreateTweet />
-
             <div>
                 {
                     tweets.map((card) => {
                         return (
                             <>
                                 <Card
+                                    id={card._id}
                                     username={'Homie'}
                                     content={card.content}
                                     timestamp={card.created_at}
@@ -47,4 +46,3 @@ export default function App(props) {
     </div>
   );
 }
-

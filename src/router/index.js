@@ -9,10 +9,8 @@ const AppRouter = props => {
 	return (
 		<Router>
 			<header>
+			<NavBar routes={routes} />
 			</header>
-			<aside>
-				<NavBar routes={routes} />
-			</aside>
 			<Switch>
 						{
 							routes.map(({ Component, key, path }) => (

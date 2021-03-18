@@ -12,7 +12,7 @@ export default function Card(props) {
     return (
         <>
             <Link to={`/Tweet/${props.id}`}> 
-                <div>
+                <div className="card">
                     <img className="avatar"/>
                     <h3 className='username' username={props.username}> {props.username} </h3>
                     <p className='content' content={props.content}> {props.content} </p>

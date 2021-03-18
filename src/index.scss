@@ -71,9 +71,12 @@ $slate-blue: rgba(136, 132, 255, 1);
 @import url('https://fonts.googleapis.com/css2?family=Oswald&family=Questrial&display=swap');
 
 ////
+//Basic settings for the body
 body{
+	font-family: 'Questrial', sans-serif;
 	background-color: $cream;
 }
+/// create tweet form
 .create-tweet{
 	background-color: $sage;
 	height: 10vh;
@@ -100,6 +103,7 @@ body{
 		float: right;
 	}
 }
+/// profile page
 #profile-container{
 	
 	h1{
@@ -126,10 +130,7 @@ body{
 		//////
 		border-radius: 50%;
 	}
-	.profile-info{
-		width: 100%;
-		// margin-left: 20px;
-	}
+
 	h3{
 		font-size: 24px;
 	}

@@ -7,15 +7,21 @@ export default function CreateTweet() {
     const [Tweet, setTweet] = useState("")
 
 
-    const createTweet = async (newTweet, e) => {
+    const createTweet = async (newTweet) => {
         // e.preventDefault();
-        const body = JSON.stringify({
-            content: newTweet.content,
-            likes: newTweet.likes
+        const body = JSON.stringify({ 
+            tweet: {
+                content: newTweet.content,
+                user_id: 1
+                
+            }
+           
+
 
         });
+        console.log(newTweet);
         try {
-            const response =  await fetch('https://seir-tweeter-api.herokuapp.com/', {
+            const response =  await fetch('https://seir-tweeter-api.herokuapp.com/tweets', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

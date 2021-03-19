@@ -284,7 +284,7 @@ body{
 	margin: 0 auto;
 	margin-top: 20px;
 	width: 90%; 
-	height: 50vh;
+	height: 30vh;
 	border: 1px solid white;
 	.avatar{
 		height: 125px;
@@ -301,6 +301,15 @@ body{
 		position: relative;
 		left: 60vw;
 	}
+	#profile-info{
+		position: relative;
+		right: 12vw;
+		label{
+			position: relative;
+			left: 35vw;
+			bottom: 13vh;
+		}
+	}
 
 	h3{
 		font-size: 24px;
@@ -308,7 +317,7 @@ body{
 	.card-container{
 		margin: 0 auto;
 		position: relative;
-		top: 50vh;
+		top: 30vh;
 		right: 35vw;
 	
 	}

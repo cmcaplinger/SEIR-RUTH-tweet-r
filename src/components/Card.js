@@ -26,7 +26,7 @@ export default function Card(props) {
 
 
 
-
+            <div className="Card-Component">
                 <Link to={`/Tweet/${props.id}`}> 
                     <div className="card">
                         <div className="image-and-content">
@@ -46,7 +46,7 @@ export default function Card(props) {
                         </div>
                     </div>
                 </Link>
-                <Like likes={props.likes} />
+            </div>
         </>
     )
 }

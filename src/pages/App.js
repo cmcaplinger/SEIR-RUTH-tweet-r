@@ -19,29 +19,42 @@ export default function App(props) {
         })()
     }, [])
 
-  return (
+    useEffect(() => {
+        (async () => {
+            try {
+                const res = await fetch(`https://seir-tweeter-api.herokuapp.com/users`);
+                const data = await res.json()
+                await setUser(data)
+            } catch (error) {
+                console.error(error)
+            }
+        })()
+    }, [])
+
+return (
     <div className="app-container">
-      <div id="main">
-        <CreateTweet />
-            <div>
-                {
-                    tweets.map((card) => {
-                        return (
-                            <>
-                                <Card
-                                    id={card._id}
-                                    username={'Homie'}
-                                    content={card.content}
-                                    timestamp={card.created_at}
-                                    likes={card.likes}
-                                    retweets={card.retweets}
-                                />
-                            </>
-                        )
-                    })
-                }
-            </div>
-      </div>  
+        <div id="main">
+            <CreateTweet />
+                <div>
+                    {
+                        tweets.map((card) => {
+                            return (
+                                <>
+                                    <Card
+                                        id={card._id}
+                                        // name={card.name}
+                                        // username={card.username}   need to map these from the user 
+                                        content={card.content}
+                                        timestamp={card.created_at}
+                                        likes={card.likes}
+                                        // retweets={card.retweets}
+                                    />
+                                </>
+                            )
+                        })
+                    }
+                </div>
+        </div>  
     </div>
   );
 }

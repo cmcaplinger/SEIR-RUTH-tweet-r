@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-//import Like and Retweet
+
+import Like from '../components/Like'
+
 
 export default function Card(props) {
 
@@ -26,27 +28,33 @@ export default function Card(props) {
 
 
 
+
             <div className="Card-Component">
                 <Link to={`/Tweet/${props.id}`}> 
-                    <div class="card">
-                        <div class="image-and-content">
-                            <img src="https://static.scientificamerican.com/sciam/cache/file/7A715AD8-449D-4B5A-ABA2C5D92D9B5A21_source.png"/>
-                                <div class="content">
-                                    <div class="top">
-                                        <p class="user-name">{props.username}</p>
-                                        <p class="handle-name">@coolbob</p>
-                                        <p class="date">{props.timestamp}</p>
+                    <div className="card">
+                        <div className="image-and-content">
+                            {/* <img src="https://static.scientificamerican.com/sciam/cache/file/7A715AD8-449D-4B5A-ABA2C5D92D9B5A21_source.png"/> */}
+                                <div className="content">
+                                    <div className="top">
+                                        <p className="user-name">{props.username}</p>
+                                        <p className="handle-name">@coolbob</p>
+
+                                        <p className="date">{props.timestamp}</p>
                                     </div>
-                                        <p class="tweet">{props.content}</p>
-                                <div class="actions">
+                                        <p className="tweet">{props.content}</p>
+                                <div className="actions">
                                         <ion-icon name="chatbubbles-outline">{props.comments}</ion-icon> 
-                                        <ion-icon name="heart-outline">{props.likes}</ion-icon>
+                                        <ion-icon name="heart-outline">{props.likes}</ion-icon>             
                                 </div>
                             </div>  
                         </div>
                     </div>
                 </Link>
+
             </div>
+
+            <Like />
+
         </>
     )
 }

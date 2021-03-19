@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import Card from '../components/Card';
 import CreateTweet from '../components/CreateTweet';
 
@@ -33,28 +34,29 @@ export default function App(props) {
 
 return (
     <div className="app-container">
-        <div id="main">
-            <CreateTweet />
-                <div>
-                    {
-                        tweets.map((card) => {
-                            return (
-                                <>
+      <div id="main">
+        <CreateTweet />
+            <div>
+                {
+                    tweets.map((card) => {
+                        return (
+                            <>
+                                <Link to={`/Tweet/${card.id}`}>
                                     <Card
                                         id={card._id}
-                                        // name={card.name}
-                                        // username={card.username}   need to map these from the user 
+                                        username={'Homie'}
                                         content={card.content}
                                         timestamp={card.created_at}
                                         likes={card.likes}
-                                        // retweets={card.retweets}
+                                        retweets={card.retweets}
                                     />
-                                </>
-                            )
-                        })
-                    }
-                </div>
-        </div>  
+                                </Link>
+                            </>
+                        )
+                    })
+                }
+            </div>
+      </div>  
     </div>
   );
 }

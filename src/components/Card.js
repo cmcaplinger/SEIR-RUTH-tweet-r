@@ -13,8 +13,9 @@ export default function Card(props) {
 
     return (
         <>
-            {/* <Link to={`/Tweet/${props.id}`}> 
-                <div className="card">
+            <Link to={`/Tweet/${props.id}`}> 
+                <div>
+
                     <img className="avatar"/>
                     <h3 className='username' username={props.username}> {props.username} </h3>
                     <p className='content' content={props.content}> {props.content} </p>
@@ -22,15 +23,15 @@ export default function Card(props) {
                     <small className='likes' likes={props.likes}>{props.likes}</small> <br />
                     <small className='retweets' retweets={props.retweets}>{props.retweets}</small>
                 </div>    
-            </Link> */}
+            </Link> */)
             {/* <Like/>
             <Retweet/> */}
 
 
 
 
-            <div className="Card-Component">
                 <Link to={`/Tweet/${props.id}`}> 
+<<<<<<< HEAD
                     <div className="card">
                         <div className="image-and-content">
                             <img src="https://static.scientificamerican.com/sciam/cache/file/7A715AD8-449D-4B5A-ABA2C5D92D9B5A21_source.png"/>
@@ -40,6 +41,16 @@ export default function Card(props) {
                                         <p className="handle-name">@coolbob</p>
 
                                         <p className="date">{props.timestamp}</p>
+=======
+                    <div class="card">
+                        <div class="image-and-content">
+                            <img src="https://static.scientificamerican.com/sciam/cache/file/7A715AD8-449D-4B5A-ABA2C5D92D9B5A21_source.png"/>
+                                <div class="content">
+                                    <div class="top">
+                                        <p class="user-name">{props.username}</p>
+                                        <p class="handle-name">@coolbob</p>
+                                        <p class="date">{props.timestamp}</p>
+>>>>>>> 33c3961867179de45335ba0c8ce61fd66d1c95c9
                                     </div>
                                         <p className="tweet">{props.content}</p>
                                 <div className="actions">
@@ -49,11 +60,9 @@ export default function Card(props) {
                             </div>  
                         </div>
                     </div>
-                </Link>
+            </Link>
 
-            </div>
-
-            <Like />
+            <Link />
 
         </>
     )

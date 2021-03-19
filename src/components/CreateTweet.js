@@ -18,7 +18,7 @@ export default function CreateTweet() {
                 likes: 0,
                 retweets: 0,
                 user_id: 2
-            }
+            } 
         });
     
         try {

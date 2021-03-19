@@ -51,17 +51,22 @@ export default function Profile(props) {
     return(
       
         <div id="profile-container">
-            <h1>Profile Page</h1> {/*name in 'Profile' */}
-            {allUser.map(user => {
-                return(
-                <button onClick={() => setUserChoice(user.id)}>
-                    {user.name}
-                </button>
-                )
-            })}
+                <div className="userSwitchButtons">
+                    {allUser.map(user => {
+                        return(
+                        <button onClick={() => setUserChoice(user.id)}>
+                            {user.name}
+                        </button>
+                        )
+                    })}
+                </div>
             <div id="profile-info">
                 <img className="avatar"/>
-                <h3 className='user-name'>   </h3>
+                <label>Name:<h3 className="user-name">{user.name}</h3></label>
+                <label>Username: <h4 className="userName">{user.username}</h4></label>
+                <label>Bio: <p className="user-bio">{user.bio}</p></label>
+                <label>Followers: <small className="user-followers">{user.followers}</small></label><br />
+                <label>Following: <small className="user-following">{user.following}</small></label>
             </div>
             <div>
                 {
@@ -83,5 +88,10 @@ export default function Profile(props) {
             <Show />
         </div>
     )
-   
 }
+
+// export default ProfilePage = {
+//     Profile: Profile,
+//     userChoice: userChoice,
+
+// }

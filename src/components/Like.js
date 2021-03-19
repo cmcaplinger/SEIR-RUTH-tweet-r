@@ -2,36 +2,35 @@ import { useEffect, useState } from 'react';
 
 export default function Like(props){
 
-const [likes, addLikes] = useState(0);
+const [likes, setLikes] = useState([]);
+// const [isLiked, updatedLiked] = useState(false);
+
+// const handleLikes = () => {
+//     if (!isLiked) {
+//         updatedLiked(true)
+//         setLikes(likes => likes + 1);
+//         addToAPI();
+//     }
+// }
 
 
-useEffect(() => {
-    (async () => {
-        try {
-            const res = await fetch('/seir-tweeter-api.herokuapp.com/tweets');
-            const data = await res.json()
-            await addLikes(data.likes)
-        } catch (error) {
-            console.error(error)
-        }
-    })()
-}, [])
-
-
-const updateLikes = async event => {
+const addToAPI = async event => {
     event.preventDefault();
-    try {
-        const response = await fetch(`/seir-tweeter-api.herokuapp.com/tweets/${props.match.params.id}`, {
+    // updatedLiked(false)
+     try {
+        const response = await fetch(`/seir-tweeter-api.herokuapp.com/tweets/1`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify({
-                likes: likes += 1
+                tweet: {
+                    likes: likes
+                }
             })
         });
         const data = await response.json();
-        addLikes([...likes, data.likes]);
+        setLikes([...likes, data.likes]);
     } catch (error) {
         console.error(error);
     }
@@ -39,10 +38,10 @@ const updateLikes = async event => {
 
 return (
     <>
-    <button onClick={updateLikes}>
+    <button onClick={addToAPI}>
         Like
     </button>
-    <h4>Likes: {likes}</h4>
+
     </>
 )}
 

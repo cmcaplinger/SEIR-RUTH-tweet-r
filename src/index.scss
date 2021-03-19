@@ -41,6 +41,11 @@ body {
     sans-serif;
   	-webkit-font-smoothing: antialiased;
   	-moz-osx-font-smoothing: grayscale;
+	display: flex;
+	justify-content: center;
+	a:link {
+		text-decoration: none;
+	  }
 }
 ol, ul {
 	list-style: none;
@@ -177,12 +182,14 @@ $bar-spacing: 15px;
 		display: flex;
 		justify-content: center;
 		height: auto;
-		width: 90%;
-		border: 1px solid blue;
+		width: 400px;
+		// border: 1px solid blue;
 		padding: 5px;
 		border-radius: 5px;
-		margin: 5px;
-		color: $black
+		margin: 10px;
+		color: $black;
+		font-size: 14px;
+		background-color: white;
 	  }
 	  
 	  .image-and-content {
@@ -198,7 +205,9 @@ $bar-spacing: 15px;
 	  
 	  .content {
 		margin: 2px;
-		border: 1px solid green;
+		// border: 1px solid green;
+		width: 320px;
+		
 	  }
 	  
 	  .user-name, .handle-name, .date {
@@ -207,10 +216,12 @@ $bar-spacing: 15px;
 	  
 	  .user-name {
 		font-weight: bold;
+		text-decoration: none;
 	  }
 	  
 	  .tweet {
-		margin: 2px 0;
+		margin: 2px;
+		text-decoration: none;
 	  }
 	  
 	  .top, .actions {
@@ -219,7 +230,7 @@ $bar-spacing: 15px;
 	  /*   justify-content: space-between; */
 	  /*   height: 30px; */
 	  /*   width: 100%; */
-		border: 1px solid red;
+		// border: 1px solid red;
 	  }
 	  
 	  .actions {

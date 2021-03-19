@@ -255,7 +255,7 @@ body{
 	form{
 		display: flex;
 		justify-content: space-between;
-		padding: 3px;
+		padding: 5px;
 	}
 	input{
 		height: 6vh;
@@ -263,7 +263,7 @@ body{
 		margin: 2px;
 	}
 	.tweet-button{
-		height: 3vh;
+		height: 25px;
 		width: 20%;
 		background-color: $mandarin;
 		color: $cream;
@@ -275,9 +275,9 @@ body{
 /// profile page
 #profile-container{
 	
-	h1{
-		display:none;
-	}
+	// h1{
+	// 	display:none;
+	// }
 	display: flex;
   	background-color: $sage;
 	color: white;

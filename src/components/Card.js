@@ -13,6 +13,7 @@ export default function Card(props) {
 
     return (
         <>
+
             <div className="Card-Component"> 
                     <div className="card">
                         <div className="image-and-content">
@@ -21,21 +22,19 @@ export default function Card(props) {
                                     <div className="top">
                                         <p className="user-name">{props.username}</p>
                                         <p className="handle-name">@coolbob</p>
-
                                         <p className="date">{props.timestamp}</p>
                                     </div>
                                         <p className="tweet">{props.content}</p>
+                                </div>  
                                 <div className="actions">
                                         <ion-icon name="chatbubbles-outline">{props.comments}</ion-icon> 
                                         <ion-icon name="heart-outline">{props.likes}</ion-icon>             
                                 </div>
-                            </div>  
                         </div>
                     </div>
             </div>
 
             <Like />
-
         </>
     )
 }

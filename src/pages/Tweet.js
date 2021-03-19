@@ -10,7 +10,7 @@ export default function Tweet(props) {
     useEffect(() => {
         (async () => {
             try {
-                const res = await fetch(`https://seir-tweeter-api.herokuapp.com/tweets/${props.match.params.id}`);//props.match
+                const res = await fetch(`https://seir-tweeter-api.herokuapp.com/tweets/${props.match.params.id}`);
                 const data = await res.json()
                 await setCardInfo(data)
             } catch (error) {
@@ -38,19 +38,18 @@ export default function Tweet(props) {
             });
         } catch (error) {
             console.error(error);
-
         }
     }
 
     return(
-        <div id="tweet-container">
+        <div className="tweet-container">
             <div className="show-card">
                 {
-                    cardInfo.map((card) => {
+                    Object.keys(cardInfo).map((card) => {
                         return (
                             <>
                                 <Card
-                                    name={card.name}
+                                    // name={card.name}
                                     username={card.user_id}
                                     content={card.content}
                                     timestamp={card.created_at}

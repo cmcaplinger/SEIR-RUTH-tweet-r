@@ -32,7 +32,7 @@ export default function Card(props) {
                                 </div>
                         </div>
                     </div>
-            </Link>
+            </div>
 
             <Like />
         </>

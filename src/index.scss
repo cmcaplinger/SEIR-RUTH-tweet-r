@@ -184,6 +184,13 @@ background: $mandarin;
 		width: 400px;
 		padding: 5px;
 		border-radius: 5px;
+
+		margin: 5px;
+		color: $black
+	}
+	
+	.image-and-content {
+=======
 		margin: 10px;
 		color: $black;
 		font-size: 14px;
@@ -203,6 +210,12 @@ background: $mandarin;
 	
 	.content {
 		margin: 2px;
+
+		border: 1px solid green;
+	}
+	
+	.user-name, .handle-name, .date {
+=======
 		// border: 1px solid green;
 		width: 320px;
 		
@@ -214,6 +227,15 @@ background: $mandarin;
 	
 	.user-name {
 		font-weight: bold;
+
+	}
+	
+	.tweet {
+		margin: 2px 0;
+	}
+	
+	.top, .actions {
+=======
 		text-decoration: none;
 	  }
 	  
@@ -228,9 +250,10 @@ background: $mandarin;
 	  /*   justify-content: space-between; */
 	  /*   height: 30px; */
 	  /*   width: 100%; */
-		// border: 1px solid red;
-	  }
-	  
+<
+		border: 1px solid red;
+	}
+	
 	  .actions {
 		justify-content: flex-end;
 	  /*   align-self: center; */

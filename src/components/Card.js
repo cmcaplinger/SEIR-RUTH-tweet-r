@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
 //import Like and Retweet
 
 export default function Card(props) {
@@ -26,8 +25,6 @@ export default function Card(props) {
 
 
 
-
-                <Link to={`/Tweet/${props.id}`}> 
                     <div class="card">
                         <div class="image-and-content">
                             <img src="https://static.scientificamerican.com/sciam/cache/file/7A715AD8-449D-4B5A-ABA2C5D92D9B5A21_source.png"/>
@@ -45,7 +42,6 @@ export default function Card(props) {
                             </div>  
                         </div>
                     </div>
-                </Link>
         </>
     )
 }

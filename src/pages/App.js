@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import Card from '../components/Card';
 import CreateTweet from '../components/CreateTweet';
 
@@ -28,14 +29,16 @@ export default function App(props) {
                     tweets.map((card) => {
                         return (
                             <>
-                                <Card
-                                    id={card._id}
-                                    username={'Homie'}
-                                    content={card.content}
-                                    timestamp={card.created_at}
-                                    likes={card.likes}
-                                    retweets={card.retweets}
-                                />
+                                <Link to={`/Tweet/${card.id}`}>
+                                    <Card
+                                        id={card._id}
+                                        username={'Homie'}
+                                        content={card.content}
+                                        timestamp={card.created_at}
+                                        likes={card.likes}
+                                        retweets={card.retweets}
+                                    />
+                                </Link>
                             </>
                         )
                     })

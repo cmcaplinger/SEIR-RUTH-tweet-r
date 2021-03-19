@@ -20,7 +20,19 @@ export default function App(props) {
         })()
     }, [])
 
-  return (
+    useEffect(() => {
+        (async () => {
+            try {
+                const res = await fetch(`https://seir-tweeter-api.herokuapp.com/users`);
+                const data = await res.json()
+                await setUser(data)
+            } catch (error) {
+                console.error(error)
+            }
+        })()
+    }, [])
+
+return (
     <div className="app-container">
       <div id="main">
         <CreateTweet />

@@ -28,7 +28,6 @@ export default function CreateTweet() {
                 },
                 body: body
             });
-            
         } catch (error) {
             console.error(error);
 

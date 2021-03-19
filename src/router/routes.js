@@ -7,7 +7,7 @@ const routes = [
     {
 		Component: Profile,
 		key: 'Profile',
-		path: '/profile/:id'
+		path: '/Profile/:id'
     },
     {
 		Component: Tweet,

@@ -68,7 +68,7 @@ export default function Profile(props) {
                 <label>Followers: <small className="user-followers">{user.followers}</small></label><br />
                 <label>Following: <small className="user-following">{user.following}</small></label>
             </div>
-            <div>
+            <div className="card-container">
                 {
                     cardInfo.map((card) => {
                         return (

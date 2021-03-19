@@ -1,4 +1,3 @@
-import React from 'react';
 import App from '../pages/App';
 import Profile from '../pages/Profile';
 import Tweet from '../pages/Tweet';

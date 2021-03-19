@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+
 import Like from '../components/Like'
+
 
 export default function Card(props) {
 
@@ -26,6 +28,7 @@ export default function Card(props) {
 
 
 
+
             <div className="Card-Component">
                 <Link to={`/Tweet/${props.id}`}> 
                     <div className="card">
@@ -35,6 +38,7 @@ export default function Card(props) {
                                     <div className="top">
                                         <p className="user-name">{props.username}</p>
                                         <p className="handle-name">@coolbob</p>
+
                                         <p className="date">{props.timestamp}</p>
                                     </div>
                                         <p className="tweet">{props.content}</p>
@@ -46,7 +50,11 @@ export default function Card(props) {
                         </div>
                     </div>
                 </Link>
+
             </div>
+
+            <Like />
+
         </>
     )
 }

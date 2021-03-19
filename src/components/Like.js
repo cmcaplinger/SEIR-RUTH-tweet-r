@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 
 export default function Like(props){
 
+
 const [likes, setLikes] = useState([]);
 // const [isLiked, updatedLiked] = useState(false);
 
@@ -35,6 +36,7 @@ const addToAPI = async event => {
         console.error(error);
     }
 };
+
 
 return (
     <>

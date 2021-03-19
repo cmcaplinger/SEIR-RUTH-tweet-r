@@ -3,11 +3,6 @@ import { Link } from 'react-router-dom';
 import routes from '../router/routes';
 
 const NavBar = props => {
-	// (function () {
-	// 	(".menu-wrapper").on('click', function() {
-	// 		(".hamburger-menu").toggleClass('animate');
-	// 	})
-	// })();
 	return (
 		<nav className="NavBar">
 			<div class="menu">
@@ -15,7 +10,8 @@ const NavBar = props => {
   				<div id="logo"></div>
 			</div>
 			<div class="menu-wrapper">
-				<div class="hamburger-menu">			
+				<div class="hamburger-menu">
+					<input type="checkbox"/>			
 			</div>
 			</div>
 			</div>

@@ -11,14 +11,9 @@ export default function Card(props) {
 
     return (
         <>
-<<<<<<< HEAD
             <Link to={`/Tweet/${props.id}`}> 
                 <div>
 
-=======
-            {/* <Link to={`/Tweet/${props.id}`}> 
-                <div className="card">
->>>>>>> 4d3944e0b601d92792e3499f2f22c8a85e48e69d
                     <img className="avatar"/>
                     <h3 className='username' username={props.username}> {props.username} </h3>
                     <p className='content' content={props.content}> {props.content} </p>
@@ -26,7 +21,7 @@ export default function Card(props) {
                     <small className='likes' likes={props.likes}>{props.likes}</small> <br />
                     <small className='retweets' retweets={props.retweets}>{props.retweets}</small>
                 </div>    
-            </Link> */}
+            </Link> */)
             {/* <Like/>
             <Retweet/> */}
 

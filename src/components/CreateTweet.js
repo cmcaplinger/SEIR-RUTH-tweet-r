@@ -17,8 +17,8 @@ export default function CreateTweet() {
                 content: tweetValue,
                 likes: 0,
                 retweets: 0,
-                user_id: 7
-            }
+                user_id: 2
+            } 
         });
         try {
             const response =  await fetch('https://seir-tweeter-api.herokuapp.com/tweets', {

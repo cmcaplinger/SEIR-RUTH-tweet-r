@@ -1,7 +1,7 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
 import Card from '../components/Card';
-import Show from '../components/Show'
+
 
 
 export default function Profile(props) {
@@ -85,7 +85,7 @@ export default function Profile(props) {
                     })
                 }
             </div>
-            <Show />
+            
         </div>
     )
 }

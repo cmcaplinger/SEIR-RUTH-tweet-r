@@ -41,11 +41,11 @@ body {
     sans-serif;
   	-webkit-font-smoothing: antialiased;
   	-moz-osx-font-smoothing: grayscale;
-	// display: flex;
-	// justify-content: center;
-	// a:link {
-	// 	text-decoration: none;
-	//   }
+	display: flex;
+	justify-content: center;
+	a:link {
+		text-decoration: none;
+	  }
 }
 ol, ul {
 	list-style: none;
@@ -182,15 +182,9 @@ background: $mandarin;
 		justify-content: center;
 		height: auto;
 		width: 400px;
+		// border: 1px solid blue;
 		padding: 5px;
 		border-radius: 5px;
-
-		margin: 5px;
-		color: $black
-	}
-	
-	.image-and-content {
-=======
 		margin: 10px;
 		color: $black;
 		font-size: 14px;
@@ -210,12 +204,6 @@ background: $mandarin;
 	
 	.content {
 		margin: 2px;
-
-		border: 1px solid green;
-	}
-	
-	.user-name, .handle-name, .date {
-=======
 		// border: 1px solid green;
 		width: 320px;
 		
@@ -227,15 +215,6 @@ background: $mandarin;
 	
 	.user-name {
 		font-weight: bold;
-
-	}
-	
-	.tweet {
-		margin: 2px 0;
-	}
-	
-	.top, .actions {
-=======
 		text-decoration: none;
 	  }
 	  
@@ -250,10 +229,9 @@ background: $mandarin;
 	  /*   justify-content: space-between; */
 	  /*   height: 30px; */
 	  /*   width: 100%; */
-<
-		border: 1px solid red;
-	}
-	
+		// border: 1px solid red;
+	  }
+	  
 	  .actions {
 		justify-content: flex-end;
 	  /*   align-self: center; */

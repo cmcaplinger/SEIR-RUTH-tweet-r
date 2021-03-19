@@ -23,7 +23,6 @@ export default function App(props) {
     <div className="app-container">
       <div id="main">
         <CreateTweet />
-            <h1>App Page</h1>
             <div>
                 {
                     tweets.map((card) => {

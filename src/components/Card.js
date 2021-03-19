@@ -31,17 +31,6 @@ export default function Card(props) {
 
 
                 <Link to={`/Tweet/${props.id}`}> 
-<<<<<<< HEAD
-                    <div className="card">
-                        <div className="image-and-content">
-                            <img src="https://static.scientificamerican.com/sciam/cache/file/7A715AD8-449D-4B5A-ABA2C5D92D9B5A21_source.png"/>
-                                <div className="content">
-                                    <div className="top">
-                                        <p className="user-name">{props.username}</p>
-                                        <p className="handle-name">@coolbob</p>
-
-                                        <p className="date">{props.timestamp}</p>
-=======
                     <div class="card">
                         <div class="image-and-content">
                             <img src="https://static.scientificamerican.com/sciam/cache/file/7A715AD8-449D-4B5A-ABA2C5D92D9B5A21_source.png"/>
@@ -50,7 +39,6 @@ export default function Card(props) {
                                         <p class="user-name">{props.username}</p>
                                         <p class="handle-name">@coolbob</p>
                                         <p class="date">{props.timestamp}</p>
->>>>>>> 33c3961867179de45335ba0c8ce61fd66d1c95c9
                                     </div>
                                         <p className="tweet">{props.content}</p>
                                 <div className="actions">

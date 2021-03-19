@@ -276,9 +276,6 @@ body{
 /// profile page
 #profile-container{
 	
-	// h1{
-	// 	display:none;
-	// }
 	display: flex;
   	background-color: $sage;
 	color: white;
@@ -300,9 +297,19 @@ body{
 		//////
 		border-radius: 50%;
 	}
+	.userSwitchButtons{
+		position: relative;
+		left: 60vw;
+	}
 
 	h3{
 		font-size: 24px;
 	}
-
+	.card-container{
+		margin: 0 auto;
+		// position: relative;
+		// top: 50vh;
+		// right: 35vw;
+	
+	}
 }

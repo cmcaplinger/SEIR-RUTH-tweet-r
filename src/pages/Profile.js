@@ -1,6 +1,7 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
 import Card from '../components/Card';
+import Show from '../components/Show'
 
 
 export default function Profile(props) {
@@ -48,6 +49,7 @@ export default function Profile(props) {
 
 
     return(
+      
         <div id="profile-container">
             <h1>Profile Page</h1> {/*name in 'Profile' */}
             {allUser.map(user => {
@@ -78,6 +80,8 @@ export default function Profile(props) {
                     })
                 }
             </div>
+            <Show />
         </div>
     )
+   
 }

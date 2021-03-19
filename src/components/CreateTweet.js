@@ -17,7 +17,7 @@ export default function CreateTweet() {
                 content: tweetValue,
                 likes: 0,
                 retweets: 0,
-                user_id: 2
+                user_id: 7
             }
         });
         try {
@@ -34,7 +34,6 @@ export default function CreateTweet() {
 
         }
 
-
         // tweet schema here, based on the model Rosa wrote on the sketch
         // {
         //     user: "German",
@@ -49,11 +48,11 @@ export default function CreateTweet() {
     return (
         <div className="create-tweet">
             <form onSubmit={createTweet}>
-               <div className="create-tweet-input">
+                <div className="create-tweet-input">
                    {/* <input className="media-image" type="text" ref/> */}
-                   <input  type="text" ref={tweetInput}>
-                   </input>
-                   <input onClick={createTweet} type="submit" className="tweet-button" defaultValue="Tweet"/>
+                    <input  type="text" ref={tweetInput}>
+                    </input>
+                    <input onClick={createTweet} type="submit" className="tweet-button" defaultValue="Tweet"/>
                 </div>  
             </form>            
         </div>

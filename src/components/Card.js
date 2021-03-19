@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-//import Like and Retweet
+
+import Like from '../components/Like'
+
 
 export default function Card(props) {
 
@@ -38,15 +40,18 @@ export default function Card(props) {
                                         <p class="handle-name">@coolbob</p>
                                         <p class="date">{props.timestamp}</p>
                                     </div>
-                                        <p class="tweet">{props.content}</p>
-                                <div class="actions">
+                                        <p className="tweet">{props.content}</p>
+                                <div className="actions">
                                         <ion-icon name="chatbubbles-outline">{props.comments}</ion-icon> 
-                                        <ion-icon name="heart-outline">{props.likes}</ion-icon>
+                                        <ion-icon name="heart-outline">{props.likes}</ion-icon>             
                                 </div>
                             </div>  
                         </div>
                     </div>
-                </Link>
+            </Link>
+
+            <Link />
+
         </>
     )
 }

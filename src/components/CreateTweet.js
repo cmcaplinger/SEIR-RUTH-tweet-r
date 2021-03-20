@@ -30,7 +30,6 @@ export default function CreateTweet() {
             });
         } catch (error) {
             console.error(error);
-
         }
 
         // tweet schema here, based on the model Rosa wrote on the sketch

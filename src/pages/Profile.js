@@ -13,7 +13,7 @@ export default function Profile(props) {
     useEffect(() => {
         (async () => {
             try {
-                const res = await fetch(`https://seir-tweeter-api.herokuapp.com/users`);//props.match
+                const res = await fetch(`https://seir-tweeter-api.herokuapp.com/users`);
                 const data = await res.json()
                 await setAllUser(data)
             } catch (error) {
@@ -25,7 +25,7 @@ export default function Profile(props) {
     useEffect(() => {
         (async () => {
             try {
-                const res = await fetch(`https://seir-tweeter-api.herokuapp.com/users/${userChoice}`);//props.match
+                const res = await fetch(`https://seir-tweeter-api.herokuapp.com/users/${userChoice}`);
                 const data = await res.json()
                 await setUser(data.user)
             } catch (error) {

@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Card from '../components/Card'
+import LikeButton from '../components/LikeButton';
 
 export default function Tweet(props) {
 
@@ -112,23 +113,22 @@ export default function Tweet(props) {
                     </form>
                 </div>  
                 {/* mapping over all the comments, we set our useState comments to filter out the API for only comments connecting to the tweet */}
-                <div className="show-comments">
-                        {
-                            comments.filter(comment => comment.tweet_id === cardInfo.id).map(comments=> {
-                                return(
-                                    <>
-                                        <Card
-                                            key={comments.id}
-                                            username={comments.username}
-                                            content={comments.content}
-                                            timestamp={comments.created_at}
-                                        />
-                                    </>
-                                )
-                            })
-                        }
-                </div>
-                {/* <button onClick={handleDelete}>Delete Tweet</button> */}
+                {
+                    comments.map(comments=> {
+                        return(
+                            <>
+                                <Card
+                                    key={comments.id}
+                                    username={comments.username}
+                                    content={comments.content}
+                                    timestamp={comments.created_at}
+                                />
+                                 
+                            </>
+                        )
+                    })
+                }
+               
             </div>
         </div>
     )

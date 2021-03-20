@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import Card from '../components/Card';
 
 
+
 export default function Profile(props) {
 
     const [cardInfo, setCardInfo] = useState([])
@@ -48,6 +49,7 @@ export default function Profile(props) {
 
 
     return(
+      
         <div id="profile-container">
                 <div className="userSwitchButtons">
                     {allUser.map(user => {
@@ -83,6 +85,7 @@ export default function Profile(props) {
                     })
                 }
             </div>
+            
         </div>
     )
 }

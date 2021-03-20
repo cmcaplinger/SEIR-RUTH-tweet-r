@@ -1,7 +1,11 @@
+<<<<<<< HEAD
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 // import Like from '../components/Like'
+=======
+import Like from '../components/Like'
+>>>>>>> f5aa2f1867b41d0c2f8132a314ca5f54de87d63f
 
 
 export default function Card(props) {
@@ -13,6 +17,7 @@ export default function Card(props) {
 
     return (
         <>
+
             <div className="Card-Component"> 
                     <div className="card">
                         <div className="image-and-content">
@@ -21,21 +26,24 @@ export default function Card(props) {
                                     <div className="top">
                                         <p className="user-name">{props.username}</p>
                                         <p className="handle-name">@coolbob</p>
-
                                         <p className="date">{props.timestamp}</p>
                                     </div>
                                         <p className="tweet">{props.content}</p>
+                                </div>  
                                 <div className="actions">
                                         <ion-icon name="chatbubbles-outline"></ion-icon> {props.comments}
                                         <ion-icon name="heart-outline"></ion-icon> {props.likes}         
                                 </div>
-                            </div>  
                         </div>
                     </div>
             </div>
 
+<<<<<<< HEAD
             {/* <Like /> */}
 
+=======
+            <Like />
+>>>>>>> f5aa2f1867b41d0c2f8132a314ca5f54de87d63f
         </>
     )
 }

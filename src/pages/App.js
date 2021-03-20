@@ -39,6 +39,7 @@ export default function App(props) {
         })()
     }, [])
 
+<<<<<<< HEAD
     const addToAPI = async () => {
         const body = {
             tweet: {
@@ -57,6 +58,9 @@ export default function App(props) {
             console.error(error);
         }
     };
+=======
+
+>>>>>>> f5aa2f1867b41d0c2f8132a314ca5f54de87d63f
 
 return (
     <div className="app-container">
@@ -67,10 +71,14 @@ return (
                     tweets.map((card) => {
                         return (
                             <>
+<<<<<<< HEAD
                                 {/* <Link to={`/Tweet/${card.id}`}>
+=======
+                                <Link to={`/Tweet/${card.id}`} data={card}>
+>>>>>>> f5aa2f1867b41d0c2f8132a314ca5f54de87d63f
                                     <Card
                                         id={card._id}
-                                        username={'Homie'}
+                                        username={'Homie'}  // API doesn't have a username in tweets 
                                         content={card.content}
                                         timestamp={card.created_at}
                                         likes={card.likes}

@@ -185,9 +185,8 @@ position: sticky;
 		color: $black;
 		font-size: 14px;
 		background-color: white;
-	  }
-	  
-	  .image-and-content {
+	}
+	.image-and-content {
 		display: flex;
 	}
 	
@@ -203,32 +202,32 @@ position: sticky;
 		// border: 1px solid green;
 		width: 320px;
 		
-	  }
-	  
-	  .user-name, .handle-name, .date {
+	}
+	
+	.user-name, .handle-name, .date {
 		margin: 0px 2px;
 	}
 	
 	.user-name {
 		font-weight: bold;
 		text-decoration: none;
-	  }
-	  
-	  .tweet {
+	}
+	
+	.tweet {
 		margin: 2px;
 		text-decoration: none;
-	  }
-	  
-	  .top, .actions {
+	}
+	
+	.top, .actions {
 		display: flex;
 		flex-direction: row;
 	  /*   justify-content: space-between; */
 	  /*   height: 30px; */
 	  /*   width: 100%; */
 		// border: 1px solid red;
-	  }
-	  
-	  .actions {
+	}
+	
+	.actions {
 		justify-content: flex-end;
 	  /*   align-self: center; */
 	}
@@ -256,6 +255,8 @@ body{
 	background-color: $sage;
 	height: 10vh;
 	width: 100%;
+	// position: relative;
+	// top:0.1vh;
 	box-shadow: 2px 2px 2px rgba(0,0,0,0.4);
 	.create-tweet-input{
 		width:100%;
@@ -282,16 +283,15 @@ body{
 
 /// profile page
 #profile-container{
-	
 	display: flex;
-  	background-color: $sage;
+	background-color: $sage;
 	color: white;
 	padding: 16px;
 	border-radius: 10px;
 	margin: 0 auto;
 	margin-top: 20px;
 	width: 90%; 
-	height: 30vh;
+	height: 32vh;
 	border: 1px solid white;
 	.avatar{
 		height: 125px;
@@ -306,11 +306,16 @@ body{
 	}
 	.userSwitchButtons{
 		position: relative;
-		left: 60vw;
+		top: 25vh;
+		right: 2vw;
+		height: 35px;
+		display: flex;
+		flex-direction: row;
+	
 	}
 	#profile-info{
 		position: relative;
-		right: 12vw;
+		right: 85vw;
 		label{
 			position: relative;
 			left: 35vw;
@@ -322,10 +327,9 @@ body{
 		font-size: 24px;
 	}
 	.card-container{
-		margin: 0 auto;
 		position: relative;
 		top: 30vh;
-		right: 35vw;
+		right: 120vw;
 	
 	}
 }

@@ -33,6 +33,8 @@ export default function App(props) {
         })()
     }, [])
 
+
+
 return (
     <div className="app-container">
       <div id="main">
@@ -42,10 +44,10 @@ return (
                     tweets.map((card) => {
                         return (
                             <>
-                                <Link to={`/Tweet/${card.id}`}>
+                                <Link to={`/Tweet/${card.id}`} data={card}>
                                     <Card
                                         id={card._id}
-                                        username={'Homie'}
+                                        username={'Homie'}  // API doesn't have a username in tweets 
                                         content={card.content}
                                         timestamp={card.created_at}
                                         likes={card.likes}

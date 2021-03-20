@@ -1,4 +1,6 @@
 import Like from '../components/Like'
+import LikeButton from './LikeButton'
+
 
 
 export default function Card(props) {
@@ -30,8 +32,10 @@ export default function Card(props) {
                         </div>
                     </div>
             </div>
+          
 
-            <Like />
+            {/* <Like /> */}
+            <LikeButton />
         </>
     )
 }

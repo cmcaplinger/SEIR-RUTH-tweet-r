@@ -15,7 +15,7 @@ export default class LikeButton extends Component {
     render() {
         return (
             <div>
-                <button onClick={this.addLike} id={this.props.itemId}>Likes: {this.state.likes} </button>
+                <button onClick={this.addLike} id={this.props.itemId}>Like {this.state.likes} </button>
             </div>
         )
     }

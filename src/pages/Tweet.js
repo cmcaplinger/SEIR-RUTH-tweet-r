@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Card from '../components/Card'
+import LikeButton from '../components/LikeButton';
 
 export default function Tweet(props) {
 
@@ -100,10 +101,12 @@ export default function Tweet(props) {
                                     content={comments.content}
                                     timestamp={comments.created_at}
                                 />
+                                 
                             </>
                         )
                     })
                 }
+               
             </div>
         </div>
     )

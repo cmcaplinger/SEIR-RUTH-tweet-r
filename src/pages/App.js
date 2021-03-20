@@ -9,6 +9,12 @@ export default function App(props) {
   const [tweets, setTweets] = useState([])
   const [user, setUser] = useState({})
 
+//   const [likeCount, setLikeCount] = useState([]);
+//   const [specificLike, setSpecificLike] = useState(null);
+//   const [userID, setUserID] = useState(null);
+    let specificLike;
+    let tweetID;
+
   useEffect(() => {
         (async () => {
             try {
@@ -34,7 +40,6 @@ export default function App(props) {
     }, [])
 
 
-
 return (
     <div className="app-container">
       <div id="main">
@@ -53,10 +58,11 @@ return (
                                         likes={card.likes}
                                         retweets={card.retweets}
                                     />
-                                </Link>
+                                </Link> 
+                                
                             </>
                         )
-                    })
+                    }).reverse()
                 }
             </div>
       </div> 

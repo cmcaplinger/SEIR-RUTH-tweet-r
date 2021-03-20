@@ -1,6 +1,8 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import Card from '../components/Card';
+
 
 
 export default function Profile(props) {
@@ -13,7 +15,7 @@ export default function Profile(props) {
     useEffect(() => {
         (async () => {
             try {
-                const res = await fetch(`https://seir-tweeter-api.herokuapp.com/users`);//props.match
+                const res = await fetch(`https://seir-tweeter-api.herokuapp.com/users`);
                 const data = await res.json()
                 await setAllUser(data)
             } catch (error) {
@@ -25,7 +27,7 @@ export default function Profile(props) {
     useEffect(() => {
         (async () => {
             try {
-                const res = await fetch(`https://seir-tweeter-api.herokuapp.com/users/${userChoice}`);//props.match
+                const res = await fetch(`https://seir-tweeter-api.herokuapp.com/users/${userChoice}`);
                 const data = await res.json()
                 await setUser(data.user)
             } catch (error) {
@@ -48,6 +50,7 @@ export default function Profile(props) {
 
 
     return(
+      
         <div id="profile-container">
                 <div className="userSwitchButtons">
                     {allUser.map(user => {
@@ -59,7 +62,7 @@ export default function Profile(props) {
                     })}
                 </div>
             <div id="profile-info">
-                <img className="avatar"/>
+                <img src={user.image} className="avatar"/>
                 <label>Name:<h3 className="user-name">{user.name}</h3></label>
                 <label>Username: <h4 className="userName">{user.username}</h4></label>
                 <label>Bio: <p className="user-bio">{user.bio}</p></label>
@@ -71,18 +74,41 @@ export default function Profile(props) {
                     cardInfo.map((card) => {
                         return (
                             <>
-                                <Card
+                                {/* <Card
                                     username={card.user_id}
                                     content={card.content}
                                     timestamp={card.created_at}
                                     likes={card.likes}
                                     retweets={card.retweets}
-                                />
+                                /> */}
+                                <div className="Card-Component"> 
+                                        <div className="card">
+                                            <div className="image-and-content">
+                                                {/* <img src="https://static.scientificamerican.com/sciam/cache/file/7A715AD8-449D-4B5A-ABA2C5D92D9B5A21_source.png"/> */}
+                                                    <div className="content">
+                                                    <Link to={`/Tweets/${card.id}`}>
+                                                        <div className="top">
+                                                            <p className="user-name"></p>
+                                                            <p className="handle-name">@coolbob</p>
+
+                                                            <p className="date">{card.created_at}</p>
+                                                        </div>
+                                                            <p className="tweet">{card.content}</p>
+                                                    </Link>
+                                                    <div className="actions">
+                                                            <ion-icon name="chatbubbles-outline"></ion-icon> {props.comments}
+                                                            <ion-icon name="heart-outline"></ion-icon> {card.likes}         
+                                                    </div>
+                                                </div>  
+                                            </div>
+                                        </div>
+                                </div>
                             </>
                         )
                     })
                 }
             </div>
+            
         </div>
     )
 }

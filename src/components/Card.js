@@ -1,4 +1,5 @@
-import Like from '../components/Like'
+import LikeButton from './LikeButton'
+
 
 
 export default function Card(props) {
@@ -24,14 +25,14 @@ export default function Card(props) {
                                         <p className="tweet">{props.content}</p>
                                 </div>  
                                 <div className="actions">
-                                        <ion-icon name="chatbubbles-outline">{props.comments}</ion-icon> 
-                                        <ion-icon name="heart-outline">{props.likes}</ion-icon>             
+                                        <ion-icon name="chatbubbles-outline"></ion-icon> {props.comments}
+                                        <ion-icon name="heart-outline"></ion-icon> {props.likes}         
                                 </div>
                         </div>
                     </div>
             </div>
-
-            <Like />
+          
+            <LikeButton />
         </>
     )
 }

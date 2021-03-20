@@ -37,7 +37,7 @@ export default function Profile(props) {
     useEffect(() => {
         (async () => {
             try {
-                const res = await fetch('https://seir-tweeter-api.herokuapp.com/tweets');//props.match
+                const res = await fetch('https://seir-tweeter-api.herokuapp.com/tweets');
                 const data = await res.json()
                 await setCardInfo(data.filter(tweet => tweet.user_id === userChoice))
             } catch (error) {

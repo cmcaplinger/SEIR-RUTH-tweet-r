@@ -41,11 +41,6 @@ body {
     sans-serif;
   	-webkit-font-smoothing: antialiased;
   	-moz-osx-font-smoothing: grayscale;
-	display: flex;
-	justify-content: center;
-	a:link {
-		text-decoration: none;
-	  }
 }
 ol, ul {
 	list-style: none;
@@ -89,11 +84,11 @@ $bar-height: 5px;
 $bar-spacing: 15px;
 
 .menu {
-  display: flex;
-  flex-direction: row;
-  background: $sage;
-  height: 10vh;
-  position: sticky;
+display: flex;
+flex-direction: row;
+background: $sage;
+height: 10vh;
+position: sticky;
 }
 
 .logo-wrapper {
@@ -117,13 +112,13 @@ $bar-spacing: 15px;
     
 
 .menu-wrapper {
-  position: absolute;
-  top: 0vh;
-  left: 70vw;
-  right: 0;
-  bottom: 0;
-  margin: auto;
-  width: $bar-width;
+	position: absolute;
+	top: 0vh;
+	left: 70vw;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	width: $bar-width;
 	height: $bar-height + $bar-spacing*2;
 	cursor: pointer;
 }
@@ -131,7 +126,7 @@ $bar-spacing: 15px;
 .hamburger-menu,
 .hamburger-menu:after,
 .hamburger-menu:before {
-  width: $bar-width;
+	width: $bar-width;
 	height: $bar-height;
 }
 
@@ -140,10 +135,10 @@ $bar-spacing: 15px;
 	transform: translateY($bar-spacing);
 	background: rgba(255, 255, 255, 1);
 	transition: all 0ms 300ms;
-  
-  &.animate {
+
+&.animate {
     background: rgba(255, 255, 255, 0); 
-  }
+}
 }
 
 .hamburger-menu:before {
@@ -190,60 +185,59 @@ $bar-spacing: 15px;
 		color: $black;
 		font-size: 14px;
 		background-color: white;
-	  }
-	  
-	  .image-and-content {
+	}
+	.image-and-content {
 		display: flex;
-	  }
-	  
-	  img {
+	}
+	
+	img {
 		height: 50px;
 		width: 50px;
 		border-radius: 50%;
 		margin: 2px;
-	  }
-	  
-	  .content {
+	}
+	
+	.content {
 		margin: 2px;
 		// border: 1px solid green;
 		width: 320px;
 		
-	  }
-	  
-	  .user-name, .handle-name, .date {
+	}
+	
+	.user-name, .handle-name, .date {
 		margin: 0px 2px;
-	  }
-	  
-	  .user-name {
+	}
+	
+	.user-name {
 		font-weight: bold;
 		text-decoration: none;
-	  }
-	  
-	  .tweet {
+	}
+	
+	.tweet {
 		margin: 2px;
 		text-decoration: none;
-	  }
-	  
-	  .top, .actions {
+	}
+	
+	.top, .actions {
 		display: flex;
 		flex-direction: row;
 	  /*   justify-content: space-between; */
 	  /*   height: 30px; */
 	  /*   width: 100%; */
 		// border: 1px solid red;
-	  }
-	  
-	  .actions {
+	}
+	
+	.actions {
 		justify-content: flex-end;
 	  /*   align-self: center; */
-	  }
-	  
-	  ion-icon {
+	}
+	
+	ion-icon {
 		margin: 0px 2px;
 		color: $mandarin;
-	  }
-	  
-	  ion-icon:hover{
+	}
+	
+	ion-icon:hover{
 		color: green
 	  }	  
 }
@@ -254,10 +248,15 @@ body{
 	background-color: $cream;
 }
 /// create tweet form
-.create-tweet{
+// header{
+// 	position: relative;
+// 	top: 20vh;
+	.create-tweet{
 	background-color: $sage;
 	height: 10vh;
 	width: 100%;
+	// position: relative;
+	// top:0.1vh;
 	box-shadow: 2px 2px 2px rgba(0,0,0,0.4);
 	.create-tweet-input{
 		width:100%;
@@ -265,7 +264,7 @@ body{
 	form{
 		display: flex;
 		justify-content: space-between;
-		padding: 3px;
+		padding: 5px;
 	}
 	input{
 		height: 6vh;
@@ -273,43 +272,64 @@ body{
 		margin: 2px;
 	}
 	.tweet-button{
-		height: 3vh;
+		height: 25px;
 		width: 20%;
 		background-color: $mandarin;
 		color: $cream;
 		float: right;
 	}
 }
+// }
+
 /// profile page
 #profile-container{
-	
-	h1{
-		display:none;
-	}
 	display: flex;
-  	background-color: $sage;
+	background-color: $sage;
 	color: white;
 	padding: 16px;
 	border-radius: 10px;
 	margin: 0 auto;
 	margin-top: 20px;
 	width: 90%; 
-	height: 50vh;
+	height: 32vh;
 	border: 1px solid white;
 	.avatar{
 		height: 125px;
 		width: 125px;
 		border: 1px solid black;
 		//// this img is just a place holder 
-		background-image: url(https://i.stack.imgur.com/l60Hf.png);
-		background-size: cover;
-		background-position: center;
+		// background-image: url(https://i.stack.imgur.com/l60Hf.png);
+		// background-size: cover;
+		// background-position: center;
 		//////
 		border-radius: 50%;
+	}
+	.userSwitchButtons{
+		position: relative;
+		top: 25vh;
+		right: 2vw;
+		height: 35px;
+		display: flex;
+		flex-direction: row;
+	
+	}
+	#profile-info{
+		position: relative;
+		right: 85vw;
+		label{
+			position: relative;
+			left: 35vw;
+			bottom: 13vh;
+		}
 	}
 
 	h3{
 		font-size: 24px;
 	}
-
+	.card-container{
+		position: relative;
+		top: 30vh;
+		right: 120vw;
+	
+	}
 }

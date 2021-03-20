@@ -1,11 +1,4 @@
-<<<<<<< HEAD
-import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-
-// import Like from '../components/Like'
-=======
 import Like from '../components/Like'
->>>>>>> f5aa2f1867b41d0c2f8132a314ca5f54de87d63f
 
 
 export default function Card(props) {
@@ -38,12 +31,7 @@ export default function Card(props) {
                     </div>
             </div>
 
-<<<<<<< HEAD
-            {/* <Like /> */}
-
-=======
             <Like />
->>>>>>> f5aa2f1867b41d0c2f8132a314ca5f54de87d63f
         </>
     )
 }

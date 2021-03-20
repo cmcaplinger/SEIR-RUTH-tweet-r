@@ -7,6 +7,7 @@ export default function Tweet(props) {
     const [comments, setComments] = useState([])
     const commentInput = useRef(null);
 
+    let filteredComments;
 
     // Fetch the specific tweet we clicked on from the app page
     useEffect(() => {
@@ -27,7 +28,7 @@ export default function Tweet(props) {
             try {
                 const res = await fetch(`https://seir-tweeter-api.herokuapp.com/comments`);
                 const data = await res.json()
-                await setComments(data.comments.filter(comment => comment.tweet_id === props.match.params.id))
+                await setComments(data.filter(comment => comment.tweet_id == props.match.params.id))
             } catch (error) {
                 console.error(error)
             }

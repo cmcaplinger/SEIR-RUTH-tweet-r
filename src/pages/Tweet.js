@@ -3,7 +3,7 @@ import Card from '../components/Card'
 
 export default function Tweet(props) {
 
-    const [cardInfo, setCardInfo] = useState([])
+    const [cardInfo, setCardInfo] = useState({})
     const [comments, setComments] = useState([])
     const commentInput = useRef(null);
 
@@ -14,7 +14,7 @@ export default function Tweet(props) {
             try {
                 const res = await fetch(`https://seir-tweeter-api.herokuapp.com/tweets/${props.match.params.id}`);
                 const data = await res.json()
-                await setCardInfo(data)
+                await setCardInfo(data.tweet)
             } catch (error) {
                 console.error(error)
             }
@@ -27,7 +27,7 @@ export default function Tweet(props) {
             try {
                 const res = await fetch(`https://seir-tweeter-api.herokuapp.com/comments`);
                 const data = await res.json()
-                await setComments(data.filter(comment => comment.tweet_id === props.match.params.id))
+                await setComments(data.comments.filter(comment => comment.tweet_id === props.match.params.id))
             } catch (error) {
                 console.error(error)
             }
@@ -61,23 +61,24 @@ export default function Tweet(props) {
         <div className="tweet-container">
             <div className="show-card">
                 {/* This maps over the object (the tweet API is an object, had to use object.keys to be able to map it... this is us mapping the tweet.) */}
-                {
+                {/* {
                     Object.keys(cardInfo).map((card) => {
                         return (
-                            <>
+                            <> */}
                                 <Card
                                     // name={card.name}
-                                    key={card.id}
-                                    username={card.user_id}
-                                    content={card.content}
-                                    timestamp={card.created_at}
-                                    likes={card.likes}
+                                    key={cardInfo.id}
+                                    username={cardInfo.user_id}
+                                    content={cardInfo.content}
+                                    timestamp={cardInfo.created_at}
+                                    likes={cardInfo.likes}
+
                                     // retweets={card.retweets}
                                 />
-                            </>
-                        )
+                            {/* </> */}
+                        {/* )
                     })
-                }
+                } */}
                 {/* Adding a space to create a comment */}
                 <div className="add-comments">
                     <form onSubmit={createComment}>

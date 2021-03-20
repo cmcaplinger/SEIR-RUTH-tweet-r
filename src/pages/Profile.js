@@ -60,7 +60,7 @@ export default function Profile(props) {
                     })}
                 </div>
             <div id="profile-info">
-                <img className="avatar"/>
+                <img src={user.image} className="avatar"/>
                 <label>Name:<h3 className="user-name">{user.name}</h3></label>
                 <label>Username: <h4 className="userName">{user.username}</h4></label>
                 <label>Bio: <p className="user-bio">{user.bio}</p></label>

@@ -17,7 +17,7 @@ export default function CreateTweet() {
                 content: tweetValue,
                 likes: 0,
                 retweets: 0,
-                user_id: 7
+                user_id: 1
             } 
         });
         try {

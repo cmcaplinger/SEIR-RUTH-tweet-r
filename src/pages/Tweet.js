@@ -42,7 +42,7 @@ export default function Tweet(props) {
         const body = JSON.stringify({
             comments:{
                 content: commentValue,
-                tweet_id: props.match.params.id
+                tweet_id: parseInt(props.match.params.id)
             } 
         });
         try {
@@ -55,6 +55,8 @@ export default function Tweet(props) {
             });
         } catch (error) {
             console.error(error);
+        } finally {
+            window.location.replace(`/Tweet/${props.match.params.id}`)
         }
     }
 

@@ -45,7 +45,9 @@ export default function Tweet(props) {
     return(
         <div id="tweet-container">
             <div className="show-card">
-                {
+            {cardInfo ? <Card card={cardInfo} /> : ''}
+          
+                {/* {
                     cardInfo.map((card) => {
                         return (
                             <>
@@ -61,7 +63,7 @@ export default function Tweet(props) {
                             </>
                         )
                     })
-                }
+                } */}
             </div>
             <div className="add-comments">
                 <form onSubmit={createComment}>

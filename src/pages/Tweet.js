@@ -57,19 +57,12 @@ export default function Tweet(props) {
         }
     }
 
-    return(
+    return( 
         <div className="tweet-container">
             <div className="show-card">
-<<<<<<< HEAD
-            {cardInfo ? <Card card={cardInfo} /> : ''}
-          
-                {/* {
-                    cardInfo.map((card) => {
-=======
                 {/* This maps over the object (the tweet API is an object, had to use object.keys to be able to map it... this is us mapping the tweet.) */}
                 {/* {
                     Object.keys(cardInfo).map((card) => {
->>>>>>> origin/react
                         return (
                             <> */}
                                 <Card
@@ -110,7 +103,7 @@ export default function Tweet(props) {
                             </>
                         )
                     })
-                } */}
+                } 
             </div>
         </div>
     )

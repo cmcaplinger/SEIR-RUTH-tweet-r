@@ -1,10 +1,12 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Card from '../components/Card'
+import LikeButton from '../components/LikeButton';
 
 export default function Tweet(props) {
 
     const [cardInfo, setCardInfo] = useState({})
     const [comments, setComments] = useState([])
+    // const [deleted, setDeleted] = useState(false)
     const commentInput = useRef(null);
 
     let filteredComments;
@@ -33,7 +35,25 @@ export default function Tweet(props) {
                 console.error(error)
             }
         })()
-    }, [])    
+    }, [])   
+    
+    // const handleDelete = async (e) => {
+    //     e.preventDefault()
+    //     try {
+    //         const response = await fetch(`https://seir-tweeter-api.herokuapp.com/tweets/${props.match.params.id}`, {
+    //             method: 'DELETE',
+    //             headers: {
+    //                 'Content-Type': 'application/json'
+    //             }
+    //         })
+    //         const data = await response.json()
+    //         setDeleted(!deleted);
+    //     } catch (error) {
+    //         console.error(error)
+    //     } finally {
+    //         window.location.assign('/')
+    //     }
+    // }
 
     // Posting a comment to our API, giving that comment a value tweet_id that matches the tweet we came from (props.match.params.id) thus making that comment connect to that tweet
     const createComment = async (e) => {
@@ -53,6 +73,8 @@ export default function Tweet(props) {
                 },
                 body: body
             });
+            const data = await response.json()
+            setComments(data);
         } catch (error) {
             console.error(error);
         } finally {
@@ -103,10 +125,12 @@ export default function Tweet(props) {
                                     content={comments.content}
                                     timestamp={comments.created_at}
                                 />
+                                 
                             </>
                         )
                     })
                 }
+               
             </div>
         </div>
     )

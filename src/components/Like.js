@@ -3,51 +3,50 @@ import { useState } from 'react';
 export default function Like(props){
 
 
-    const [tweet, likeTweet] = useState({
-		tweet:{
-            likes: ''
-    }})
+const [likes, setLikes] = useState([]);
+// const [isLiked, updatedLiked] = useState(false);
 
-	const [tweetLike, setTweetlike] = useState(false);
-	const tweetInput = useRef(null);
-	const nameInput = useRef(null);
+// const handleLikes = () => {
+//     if (!isLiked) {
+//         updatedLiked(true)
+//         setLikes(likes => likes + 1);
+//         addToAPI();
+//     }
+// }
 
-	useEffect(() => {
-		(async () => {
-			try {
-				const response = await fetch(`https://seir-tweeter-api.herokuapp.com/tweets`);
-				const data = await response.json();
-				likeTweet(data);
-			} catch (error) {
-				console.error(error);
-			}
-		})();
-	}, [tweet, tweetLike]);
-	const addToAPI = async e => {
-		try {
-			const response = await fetch(`https://seir-tweeter-api.herokuapp.com/tweets`, {
-				method: 'PUT',
-				headers: {
-					'Content-Type': 'aplication/json'
-				}
-			});
-			const data = await response.json();
-			setTweetlike(!tweetLike);
-		} catch (error) {
-			console.error(error);
-		} 
-	};
+
+const addToAPI = async event => {
+    event.preventDefault();
+    // updatedLiked(false)
+     try {
+        const response = await fetch(`/seir-tweeter-api.herokuapp.com/tweets/1`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                tweet: {
+                    likes: likes
+                }
+            })
+        });
+        const data = await response.json();
+        setLikes([...likes, data.likes]);
+    } catch (error) {
+        console.error(error);
+    }
+};
 
 
 return (
     <>
-    
-    <LikeButton onClick={addToAPI} />
-    <button onClick={addToAPI}>TEST</button>
-   
+    <button onClick={addToAPI}>
+        Like
+    </button>
 
     </>
 )}
+
 
 
 

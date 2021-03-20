@@ -57,7 +57,7 @@ export default function Tweet(props) {
         }
     }
 
-    return( 
+    return(
         <div className="tweet-container">
             <div className="show-card">
                 {/* This maps over the object (the tweet API is an object, had to use object.keys to be able to map it... this is us mapping the tweet.) */}
@@ -103,7 +103,7 @@ export default function Tweet(props) {
                             </>
                         )
                     })
-                } 
+                }
             </div>
         </div>
     )

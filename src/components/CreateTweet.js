@@ -1,5 +1,5 @@
 import React from 'react'
-import { useState, useRef } from 'react'
+import { useRef } from 'react'
 // we can import a button component here if we like
 
 export default function CreateTweet() {
@@ -17,7 +17,7 @@ export default function CreateTweet() {
                 content: tweetValue,
                 likes: 0,
                 retweets: 0,
-                user_id: 2
+                user_id: 1
             } 
         });
         try {
@@ -30,7 +30,8 @@ export default function CreateTweet() {
             });
         } catch (error) {
             console.error(error);
-
+        } finally {
+            window.location.replace('/App')
         }
 
         // tweet schema here, based on the model Rosa wrote on the sketch

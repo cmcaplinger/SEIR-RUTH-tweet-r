@@ -1,6 +1,10 @@
+<<<<<<< HEAD
 import { Component, useEffect, useState, useRef } from 'react';
 import LikeButton from './LikeButton';
 
+=======
+import { useState } from 'react';
+>>>>>>> origin/react
 
 export default function Like(props){
 

@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import Card from '../components/Card';
 import CreateTweet from '../components/CreateTweet';
-import Like from '../components/Like'
+import NavBar from '../components/NavBar';
 
 export default function App(props) {
 
@@ -65,7 +65,7 @@ return (
                     }).reverse()
                 }
             </div>
-        </div>
+      </div> 
     </div>
   );
 }

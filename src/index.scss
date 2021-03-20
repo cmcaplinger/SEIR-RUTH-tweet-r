@@ -57,6 +57,9 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+a:link {
+	text-decoration: none;
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -77,98 +80,100 @@ $slate-blue: rgba(136, 132, 255, 1);
 
 .NavBar {
 	font-family: 'Oswald', sans-serif;
+	display: flex;
+	background: $sage;
+	height: 10vh;
+	position: sticky;
+	z-index: 9999;
+	.logo-wrapper {
+		display: flex;
+		width: 60px;
+		height: 60px;
+		border-radius: 50%;
+		background: white;
+		position: absolute;
+		left: 5vw;
+		top: 2vh;
+		justify-content: space-evenly;
+		#logo {
+		  display: flex;
+		  width: 60px;
+		  height: 70px;
+		  clip-path: polygon(68% 22%, 72% 21%, 76% 22%, 80% 22%, 82% 21%, 79% 19%, 77% 16%, 74% 12%, 71% 10%, 67% 9%, 63% 11%, 60% 14%, 59% 19%, 58% 24%, 58% 29%, 58% 32%, 54% 32%, 51% 33%, 47% 35%, 45% 38%, 42% 39%, 38% 42%, 35% 43%, 31% 43%, 27% 43%,      24% 41%, 21% 38%, 21% 42%, 22% 44%, 21% 48%, 24% 52%, 27% 56%, 30% 59%, 33% 61%, 37% 63%, 42% 64%, 47% 65%, 49% 68%, 49% 71%, 48% 74%, 49% 78%, 48% 81%, 52% 79%, 55% 82%, 55% 78%, 58% 78%, 55% 76%, 52% 74%, 52% 71%, 52% 67%, 53% 64%, 56% 63%,      60% 62%, 63% 60%, 66% 57%, 69% 55%, 71% 51%, 72% 47%, 72% 43%, 71% 38%, 69% 33%, 68% 29%, 66% 22%);
+		  background: $mandarin;
+		  position: absolute;
+		  } 
+	  }
+	.menu-toggle {
+		position: relative;
+		flex-direction: row;
+		justify-content: space-between;
+		z-index: 1;
+		top: 2vh;
+		left: 5vw;
+		input {
+			display: flex;
+			width: 100px;
+			height: 100px;
+			position: absolute;
+			top: -4vh;
+			left: 70vw;
+			cursor: pointer;
+			opacity: 0;
+			z-index: 2;
+		}
+		input:checked ~ span {
+			opacity: 1;
+			transform: rotate(45deg) translate(-2px, -1px);
+		}
+		input:checked ~ span:nth-last-child(3) {
+			transform: rotate(-45deg) translate(0, -1px);
+		}
+		span {
+			width: 25px;
+			height: 5px;
+			top: 2vh;
+			left: 80vw;
+			position: absolute;
+			background: white;
+			border-radius: 3px;
+			z-index: 1;
+			transform-origin: 4px 0px;
+			transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+						background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+						opacity 0.55s ease;
+		}
+		span:first-child {
+			transform-origin: 0% 0%;
+		}
+		span:nth-last-child(2) {
+			transform-origin: 0% 100%;
+		}
+		#menu {
+		visibility: hidden;	
+		position: absolute;
+		width: 90vw;
+		padding: 50px;
+		padding-top: 10px;
+		height: 5vh;
+		background: $sage;
+		list-style-type: none;
+		transform-origin: 0% 0%;
+		transform: translate(-10%, 0%);
+		transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+		}
+		input:checked ~ #menu {
+			visibility: visible;
+			}
+		#menu-item {
+			color: white;
+			text-decoration: none;
+			padding: 10px 0;
+		}
+
+	}
 }
-
-$bar-width: 50px;
-$bar-height: 5px;
-$bar-spacing: 15px;
-
-.menu {
-  display: flex;
-  flex-direction: row;
-  background: $sage;
-  height: 10vh;
-  position: sticky;
-}
-
-.logo-wrapper {
-  margin: 5vw;
-  display: flex;
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  background: white;
-  position: absolute;
-  justify-content: space-evenly;
-}
-
-  #logo {
-  display: flex;
-  width: 80px;
-  height: 90px;
-  clip-path: polygon(68% 22%, 72% 21%, 76% 22%, 80% 22%, 82% 21%, 79% 19%, 77% 16%, 74% 12%, 71% 10%, 67% 9%, 63% 11%, 60% 14%, 59% 19%, 58% 24%, 58% 29%, 58% 32%, 54% 32%, 51% 33%, 47% 35%, 45% 38%, 42% 39%, 38% 42%, 35% 43%, 31% 43%, 27% 43%,      24% 41%, 21% 38%, 21% 42%, 22% 44%, 21% 48%, 24% 52%, 27% 56%, 30% 59%, 33% 61%, 37% 63%, 42% 64%, 47% 65%, 49% 68%, 49% 71%, 48% 74%, 49% 78%, 48% 81%, 52% 79%, 55% 82%, 55% 78%, 58% 78%, 55% 76%, 52% 74%, 52% 71%, 52% 67%, 53% 64%, 56% 63%,      60% 62%, 63% 60%, 66% 57%, 69% 55%, 71% 51%, 72% 47%, 72% 43%, 71% 38%, 69% 33%, 68% 29%, 66% 22%);
-  background: $mandarin;
-    
-
-.menu-wrapper {
-  position: absolute;
-  top: 0vh;
-  left: 70vw;
-  right: 0;
-  bottom: 0;
-  margin: auto;
-  width: $bar-width;
-	height: $bar-height + $bar-spacing*2;
-	cursor: pointer;
-}
-
-.hamburger-menu,
-.hamburger-menu:after,
-.hamburger-menu:before {
-  width: $bar-width;
-	height: $bar-height;
-}
-
-.hamburger-menu {
-	position: relative;
-	transform: translateY($bar-spacing);
-	background: rgba(255, 255, 255, 1);
-	transition: all 0ms 300ms;
-  
-  &.animate {
-    background: rgba(255, 255, 255, 0); 
-  }
-}
-
-.hamburger-menu:before {
-	content: "";
-	position: absolute;
-	left: 0;
-	bottom: $bar-spacing;
-	background: rgba(255, 255, 255, 1);
-	transition: bottom 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
-}
-
-.hamburger-menu:after {
-	content: "";
-	position: absolute;
-	left: 0;
-	top: $bar-spacing;
-	background: rgba(255, 255, 255, 1);
-	transition: top 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
-}
-
-.hamburger-menu.animate:after {
-	top: 0;
-	transform: rotate(45deg);
-	transition: top 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1);;
-}
-
-.hamburger-menu.animate:before {
-	bottom: 0;
-	transform: rotate(-45deg);
-	transition: bottom 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1);;
-}}
+   
 ////
 
 .Card-Component {
@@ -176,62 +181,67 @@ $bar-spacing: 15px;
 		display: flex;
 		justify-content: center;
 		height: auto;
-		width: 90%;
-		border: 1px solid blue;
+		width: 400px;
+		// border: 1px solid blue;
 		padding: 5px;
 		border-radius: 5px;
-		margin: 5px;
-		color: $black
-	  }
-	  
-	  .image-and-content {
+		margin: 10px;
+		color: $black;
+		font-size: 14px;
+		background-color: white;
+	}
+	.image-and-content {
 		display: flex;
-	  }
-	  
-	  img {
+	}
+	
+	img {
 		height: 50px;
 		width: 50px;
 		border-radius: 50%;
 		margin: 2px;
-	  }
-	  
-	  .content {
+	}
+	
+	.content {
 		margin: 2px;
-		border: 1px solid green;
-	  }
-	  
-	  .user-name, .handle-name, .date {
+		// border: 1px solid green;
+		width: 320px;
+		
+	}
+	
+	.user-name, .handle-name, .date {
 		margin: 0px 2px;
-	  }
-	  
-	  .user-name {
+	}
+	
+	.user-name {
 		font-weight: bold;
-	  }
-	  
-	  .tweet {
-		margin: 2px 0;
-	  }
-	  
-	  .top, .actions {
+		text-decoration: none;
+	}
+	
+	.tweet {
+		margin: 2px;
+		text-decoration: none;
+	}
+	
+	.top, .actions {
 		display: flex;
 		flex-direction: row;
 	  /*   justify-content: space-between; */
 	  /*   height: 30px; */
 	  /*   width: 100%; */
-		border: 1px solid red;
-	  }
-	  
-	  .actions {
+		// border: 1px solid red;
+	}
+	
+	.actions {
 		justify-content: flex-end;
 	  /*   align-self: center; */
-	  }
-	  
-	  ion-icon {
+	}
+	
+	ion-icon {
 		margin: 0px 2px;
 		color: $mandarin;
-	  }
-	  
-	  ion-icon:hover{
+	}
+	
+	ion-icon:hover{
 		color: green
 	  }	  
 }
@@ -242,10 +252,15 @@ body{
 	background-color: $cream;
 }
 /// create tweet form
-.create-tweet{
+// header{
+// 	position: relative;
+// 	top: 20vh;
+	.create-tweet{
 	background-color: $sage;
 	height: 10vh;
 	width: 100%;
+	// position: relative;
+	// top:0.1vh;
 	box-shadow: 2px 2px 2px rgba(0,0,0,0.4);
 	.create-tweet-input{
 		width:100%;
@@ -253,7 +268,7 @@ body{
 	form{
 		display: flex;
 		justify-content: space-between;
-		padding: 3px;
+		padding: 5px;
 	}
 	input{
 		height: 6vh;
@@ -261,43 +276,64 @@ body{
 		margin: 2px;
 	}
 	.tweet-button{
-		height: 3vh;
+		height: 25px;
 		width: 20%;
 		background-color: $mandarin;
 		color: $cream;
 		float: right;
 	}
 }
+// }
+
 /// profile page
 #profile-container{
-	
-	h1{
-		display:none;
-	}
 	display: flex;
-  	background-color: $sage;
+	background-color: $sage;
 	color: white;
 	padding: 16px;
 	border-radius: 10px;
 	margin: 0 auto;
 	margin-top: 20px;
 	width: 90%; 
-	height: 50vh;
+	height: 32vh;
 	border: 1px solid white;
 	.avatar{
 		height: 125px;
 		width: 125px;
 		border: 1px solid black;
 		//// this img is just a place holder 
-		background-image: url(https://i.stack.imgur.com/l60Hf.png);
-		background-size: cover;
-		background-position: center;
+		// background-image: url(https://i.stack.imgur.com/l60Hf.png);
+		// background-size: cover;
+		// background-position: center;
 		//////
 		border-radius: 50%;
+	}
+	.userSwitchButtons{
+		position: relative;
+		top: 25vh;
+		right: 2vw;
+		height: 35px;
+		display: flex;
+		flex-direction: row;
+	
+	}
+	#profile-info{
+		position: relative;
+		right: 85vw;
+		label{
+			position: relative;
+			left: 35vw;
+			bottom: 13vh;
+		}
 	}
 
 	h3{
 		font-size: 24px;
 	}
-
+	.card-container{
+		position: relative;
+		top: 30vh;
+		right: 123vw;
+	
+	}
 }

@@ -14,7 +14,7 @@ export default function Card(props) {
             <div className="Card-Component"> 
                     <div className="card">
                         <div className="image-and-content">
-                            {/* <img src="https://static.scientificamerican.com/sciam/cache/file/7A715AD8-449D-4B5A-ABA2C5D92D9B5A21_source.png"/> */}
+                            <img src="https://static.scientificamerican.com/sciam/cache/file/7A715AD8-449D-4B5A-ABA2C5D92D9B5A21_source.png"/>
                                 <div className="content">
                                     <div className="top">
                                         <p className="user-name">{props.username}</p>

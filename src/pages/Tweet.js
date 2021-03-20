@@ -6,6 +6,7 @@ export default function Tweet(props) {
 
     const [cardInfo, setCardInfo] = useState({})
     const [comments, setComments] = useState([])
+    // const [deleted, setDeleted] = useState(false)
     const commentInput = useRef(null);
 
 
@@ -28,12 +29,31 @@ export default function Tweet(props) {
             try {
                 const res = await fetch(`https://seir-tweeter-api.herokuapp.com/comments`);
                 const data = await res.json()
-                await setComments(data.comments.filter(comment => comment.tweet_id === props.match.params.id))
+                await setComments(data)
+                // .filter(comment => comment.tweet_id === props.match.params.id)
             } catch (error) {
                 console.error(error)
             }
         })()
-    }, [])    
+    }, [])   
+    
+    // const handleDelete = async (e) => {
+    //     e.preventDefault()
+    //     try {
+    //         const response = await fetch(`https://seir-tweeter-api.herokuapp.com/tweets/${props.match.params.id}`, {
+    //             method: 'DELETE',
+    //             headers: {
+    //                 'Content-Type': 'application/json'
+    //             }
+    //         })
+    //         const data = await response.json()
+    //         setDeleted(!deleted);
+    //     } catch (error) {
+    //         console.error(error)
+    //     } finally {
+    //         window.location.assign('/')
+    //     }
+    // }
 
     // Posting a comment to our API, giving that comment a value tweet_id that matches the tweet we came from (props.match.params.id) thus making that comment connect to that tweet
     const createComment = async (e) => {
@@ -53,6 +73,8 @@ export default function Tweet(props) {
                 },
                 body: body
             });
+            const data = await response.json()
+            setComments(data);
         } catch (error) {
             console.error(error);
         }
